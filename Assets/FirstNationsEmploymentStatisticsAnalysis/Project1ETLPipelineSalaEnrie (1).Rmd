@@ -1,0 +1,259 @@
+# Data Extraction Report
+
+### • Data Location and Access:
+
+**Describe how you identified and accessed the data, including a rationale for your dataset selection and its relevance to your geospatial analysis.**
+
+Going into this project I knew that I wanted to analyze a dataset that had sociopolitic/socioeconomic vectors. I also kept in mind that the dataset should ideally contain or, have the capacity to contain a spatial component. And so, I decided to browse through `StatCan` and found the dataset, *Membership in a First Nation or Indian band by labour force status: Canada, provinces and territories.*
+
+Additionally, a CSV from `htts://open.canada.ca` (another federal open data portal) containing *First Nations' locations* was downloaded to join to the main dataset. See *Merging/Joining Rationale* section for more information.
+
+I determined that this dataset was appropriate for the *Extract, Transform, Load pipeline* project because the dataset meets the requirements of containing the minimum amount of 5 true categorical (after transfornation) and numeric variables, minimum 200 rows, a spatial component can be added, as well as its originality and uniqueness from an acceptable source (obtained from a Canadian federal data portal stored in a CSV format).
+
+The *Membership in a First Nation or Indian band by labour force status: Canada, provinces and territories* dataset contains multiple numeric variables such as total labour force status (total population over 15 years old), [total] employed and unemployed, in the labour force (total employed and unemployed) etc.).
+
+In its raw form, the *Membership in a First Nation or Indian band by labour force status: Canada, provinces and territories* actually does not contain any categorical variables, however there are a few numeric variables that can easily be converted to categorical variables via binning. See *Binning Process* section for more information.
+
+For this analysis, the X and Y coordinates are considered as true variables because they are useful statistical predictors. For example, the Northern location (Y coordinate) of an Indigenous community greatly affects its access to resources and employment opportunities while the longitudinal position (X coordinate) of a community can be a predictor of of proximity to urban centres or coastal areas which would also affect resource access and employment opportunities. Additionally, coordinates help us visualize dataset clustering which can reveal other spatial patterns between datapoints.
+
+### • Challenges and Solutions:
+
+**Note any challenges you faced while locating, downloading, or importing the data, and the steps you took to resolve them.**
+
+When it came to locating the data, the most difficult part was choosing the correct format to work with. Since the dataset *Membership in a First Nation or Indian band by labour force status: Canada, provinces and territories* was acquired from a Data Portal, there were 6 different CSV versions and a B2020 file (compressed zip). In the end, the CSV format containing no symbols was the version that I chose because it represents the data shown on Statcan the most accurately. In addition, since it does not contain any symbols there are less subsequent steps to transform the data so that is appropriate for analysis thereby simplifying the ETL process.
+
+When it came to data import, I was careful to skip the first 14 rows of the dataset *Membership in a First Nation or Indian band by labour force status: Canada, provinces and territories* because these rows contain data such as variable and data acquisition information is not useful for our data analysis.
+
+### • Binning Process:
+
+**If you created categorical variables by binning, describe your reasoning and the steps you followed to produce the new variables.**
+
+*Membership in a First Nation or Indian band by labour force status: Canada, provinces and territories* dataset did not contain any explicit categorical variables however, there are multiple variables that represent rates in the dataset. These variables are; *Participation Rate and Employment/Unemployment Rate*.
+
+Although rates exists as continuous numeric variables, they can be further classified into categories of rates. For example, In this dataset, *Participation Rate and Employment/Unemployment Rate* were all categorized using the same range values or bin sizes so that it would be easier to compare these rates.
+
+These three attributes contain a wide range of values within their own collection of data not to mention when taking all of these rates into consideration amongst each other. To account for these wide range of values, I decided to create 5 bins to account for data skewing due to extreme values found in some of the rate columns when compared to the other rate attributes. These bins represent rates less than 20%, between 20% and 39%, between 40% and 59%, between 60% and 79% and rates greater than 80%. In the datset, the bins are labelled 1 to 5, representing the lowest bin rate to highest bin rate, respectively.
+
+### • R Code and Explanations:
+
+**Include all R code used for data extraction, along with detailed explanations of each step. Your R code and explanations should be integrated in a way that allows the reader to understand how your extraction process aligns with the project requirements and supports your geospatial analysis goals. Refer to our in-class ETL tutorial for methods to load data from various sources, and consider different extraction methods as you search for the dataset that best meets the assignment criteria.**
+
+The first step is to import the libraries that we will be using.
+
+```{r}
+
+#`Tidyverse` package will be used to create the data pipeline
+library(tidyverse)
+#`Forcats` provides tools for manipulating
+library(forcats)
+#`DMwR2` contains the function `knnImputation()` which is used to fill in NA values
+library(DMwR2)
+
+
+```
+
+Native `R` and `Tidyverse` do not contain a built-in function to calculate the statistical mode ie. the most common value in a dataset. Here we are defining a get_mode function to use in extraction section of the data outside of the main pipeline.
+
+`get_mode` calculates the mode of a column by creating a frequency table using table(x), sorting by decreasing values using sort(decreasing = TRUE) and returning the first element stored in the frequency table ie. the most common value represented by [1] in the code chunk below.
+
+```{r}
+#Define the get mode function
+#This get_mode function was taken from the etl_transform_3.Rmd provided by Steven Edwards
+get_mode <- function(x) {
+  mode_value <- names(sort(table(x), decreasing = TRUE))[1]
+  return(mode_value)
+}
+
+```
+
+Here we are using the read_csv() to upload the *Membership in a First Nation or Indian band by labour force status: Canada, provinces and territories* and the *First Nations' Locations'* csv.
+
+The datasets are also immediately converted to tibbles using the as_tibble() function in order to streamline data type casting later on. Tibbles do a great job at preserving datatypes, bringing in all of the numeric values as dbls so that these columns don't need to be cast as numeric elements in the data transformation portion of the etl. We will still have to do some data type casting further down the pipeline.
+
+```{r}
+
+# Read First Nations' Location data and convert to tibble, this csv is stored in locations
+                        #Insert filepath in the brackets below 
+locations <- read_csv('C:\\Fall 2024 Semester NSCC\\GDAA_1001\\Project1\\Premiere_Nation_First_Nation.csv') %>%
+  as_tibble()
+
+# Read Band Membership data and convert to tibble. this csv is stoed in bands
+                        #Insert filepath in the brackets below
+bandsraw <- read_csv('C:\\Fall 2024 Semester NSCC\\GDAA_1001\\Project1\\9810029501-noSymbol.csv', skip = 14, col_names = TRUE) %>% 
+  as_tibble() 
+```
+
+The next step is to filter the *Membership in a First Nation or Indian band by labour force status: Canada, provinces and territories* csv using the `filter()` (filters out columns) and `c()` function (concatenates vectors), `!` (negates the command so that instead of including the specified row vectors, they will be removed) and `%in%` operator (checks if specified elements are present in the selected vectors). Inside the filter function we are looking at the `Labour force status (8) 8` column and removing the rows at the beginning of the csv that are not relevant and may even hinder this analysis. They do not contain any data, they store the textual information of the dataset. The additional filter identifying the row numbers to be removed also contain text fields that could disrupt the etl process.
+
+```{r}
+#Filter out the unecessary rows in the dataset by directly calling their names and by row number
+  bandsraw <- bandsraw %>% 
+  filter(!`Labour force status (8) 8` %in% c(
+    "Total - Membership in a First Nation or Indian band 12",
+    "Not a member of a First Nation or Indian band",
+    "Member in a First Nation or Indian band 13 14",
+    "Membership in a First Nation or Indian band (610) 9"
+  ) & !(row_number() >= 608 & row_number() <= 630))
+  
+```
+
+In this chunk we are creating the bins in order to transform the numerical values stored in `Participation Rate`, `Employment Rate` and `Unemployment Rate` using the `mutate()` function. `Across()` is used in conjunction with `c()` within `mutate()` in order to concatenate the vectors and apply a function to multiple columns. the `case_when()` is a conditional function, evaluating conditions sequentially and returns values if the condition is **True**. The `.` found within the operators are placeholders for rate columns we specified. This is done in order to streamline the code and minimize user error by reducing input.
+
+```{r}
+#in the bands raw dataframe, create 5 bins to store Particpation and Unemployment/Employment rate values
+  bandsraw <- bandsraw %>%
+  mutate(
+    across(c("Participation rate", "Employment rate", "Unemployment rate"), 
+           ~ case_when(
+             . < 20 ~ "<20%",
+             . >= 20 & . < 40 ~ "20%-39%", 
+             . >= 40 & . < 60 ~ "40%-59%",
+             . >= 60 & . < 80 ~ "60%-79%",
+             . >= 80 ~ "≥80%",
+           ))
+  )
+```
+
+# Data Transformation Report
+
+### • Data Type Adjustments:
+
+**Explain any adjustments you made to data types, including the reasoning behind each change.**
+
+The first conversion done to both datasets was to convert them to tibbles. This was done to reduce the data type casting steps as tibbles are more precise when preserving true datatype. For example, when it comes to assigning datatypes to variables, tibbles coerce all numeric values into a dbl as this data format can be used for integer and non-integer type numeric values (ie. decimals). However, coercing all numeric variables into a dbl can lead to rounding and indexing errors, unnecessary memory usage as well as diminishing data integrity.
+
+Thus following imputation, all categorical values were converted to factors and the values stored in `Employed`, `Unemployed` and `Not in the labour force` , `In the labour force` were converted to integer values. This is to ensure data type accuracy as some functions only work on integer type values and to decrease data processing as doubles are stored in 62 bits while integers are stored in 32 bits.
+
+`Latitude` and `Longitude` variables were kept as double data type to maintain precision.
+
+In the stage of data tidying in terms of *tidyverse* principles, two new columns are created, `Rate Value` and `Count`. Since these columns are derived from columns that were already converted to the correct data types earlier in the pipeline, no data type casting is necessary here.
+
+### • Missing Value Handling:
+
+**Describe your approach to handling missing data, detailing the method (removal or imputation) and justification for your choice.**
+
+Two methods were used to handle missing data for this analysis, **mode imputation** and **knn imputation**.
+
+**Mode imputation** was used for the categorical columns `Employment Rate`, `Unemployment Rate` and `Participation Rate` following the binning process. Mode imputation is commonly used for handling missing categorical values because it fills in the most common value found in the dataset. Since categorical does not contain a "middle" or average, mean and median are not suitable as they calculate these values on real numeric datasets. When it comes to mode imputation in particular, imputation should be done after binning as conducting mode imputation before binning can lead to a skewed dataset distribution since the most common value would be overemphasized. This is in contrast with mode imputation after binning, which would fill in the most common bin, **not** value. Imputation for these vectors could also be done before binning but a different method must be used, such as knn imputation. For the purpose of this project, mode imputation was used to showcase a variety of imputation methods. Additionally, depending on the goal of the analysis either method may be more suitable over the other.
+
+**KNN imputation** was used to fill in the missing values in the numeric columns, `In the labour force/Not in the labour force` and `Unemployed/Employed` . KNN imputation is suitable for these vectors because of its ability to handle outliers and local patterns, preserve distributions and relationships between variables. Socioeconomic data is usually influenced by geographical characteristics. For example, northern indigenous communities are more likely to be further away from major urban centres which greatly reduces job opportunities, as previously mentioned. Since KNN imputation calculates the imputed value based on its multi-dimensional relationship with similar or *nearest neighbouring* data points, it is less sensitive to outliers and preserves data distributions. The `K` in KNN refers to the amount of "neighbours" being considered. For this dataset k = 7 was determined appropriate due to the size of the dataset since more data points would be more representative of broader regional trends and community clusters without overfitting the dataset. Overfitting is a commonly avoided problem with machine learning models because the model becomes too sensitive to small fluctuations in the dataset, fitting to variation due to noise rather than the actual underlying patterns in the dataset.
+
+### • Row/Column Selection:
+
+**Document any selections made for rows or columns, explaining why specific data was retained or removed.**
+
+For the *locations* csv, only `BAND_NAME`, `Latitude` and `Longitude` were kept because the `COORD_SYS` is consistent for all rows and `BAND_NUMBER` is an unnecessary identifier since `BAND_NAME` already stores unique identifiers.
+
+From the *bandsraw* csv, the `Total - Labour force dtatus 10 11` was removed as these values can be computed from the `In the labour force` and `Not in the labour force` columns.
+
+### • Merging/Joining Rationale):
+
+**If you merged or joined datasets, provide a rationale for the chosen method and explain how it supports your analysis goals.**
+
+A `left_join()` was used in order to preserve all location data which allows for a more complete spatial analysis and visualization of First Nations' labour force statistics in Canada. The left join also allows for easy identification of bands with incomplete data while maintaining their data as missing values get filled in with NA instead of not being joined into the dataset.
+
+### • Error Corrections:
+
+**List any issues with column names or cell values you identified, along with the steps you took to correct them.**
+
+There were a lot of non-alphabetical characters present and naming convention inconsistencies in the columns storing character values ie. `BAND_NAMES` in both csvs. However I was careful to remove certain characters in order to preserve the native spelling of the Bands. For example, "?" and " ' "(apostrophe) was kept as the positioning and use of these characters was consistent throughout both datasets.
+
+Symbols such as "-" and "( )", including the characters within the brackets. Phrases such as "First Nation", "Nation" and "Band" (but not including any additional characters) were removed as these phrases were used inconsistently between the two csvs. This was done in order to improve the join results as the join was based on `BAND_NAMES`.
+
+In addition, all column names were changed to maintain consistency in naming convention.
+
+### • Code and Explanations:
+
+**Include all R code used for data transformation, integrated with detailed explanations of each step. This should allow the reader to understand your approach to preparing a clean, organized dataset that meets Tidy Data standards.**
+
+This chunk we are selecting out the columns we want to rename in the locations csv using `select()` and `rename`. Using `mutate()` in conjuction with `str_remove_all()` we are modifying the character strings within the newly named `Band Name` column. The `arrange()` function is not exactly necessary but by arranging the columns, all NA values will be at the end of the dataframe. This facilitates checking if the join was processed correctly since all NA values are grouped and visible in the same area. ."\*?\\\\" refers to string stored within brackets.
+
+```{r}
+#Selecting the columns to be renamed in the locations csv
+ locations <- locations %>%
+  select(BAND_NAME, LATITUDE, LONGITUDE) %>%
+  rename(`Band name` = BAND_NAME,
+         Latitude = LATITUDE,
+         Longitude = LONGITUDE) %>%
+#Removing character string stored in the values of `Band name` for better join results
+  mutate(
+    `Band name` = str_remove_all(`Band name`, " First Nation| Nation|\\-|\\(.*?\\)|Band(?!e)")
+  ) %>%
+#Arranging band name so that imputed values will be grouped at the bottom of the daataframe
+  arrange(`Band name`) 
+ 
+```
+
+Using `select()` and `rename` we are changing the character strings within the selected columns in the the bandsraw csv. `Labour force status (8) 8` is changed to `Band Name` in order to better reflect the values that are stored within this column. Using `mutate()` in conjuction with `str_remove_all()` we are modifying the character strings within the newly named `Band Name` to match the changes and naming convention in the locations csv. Once these changes are made, the locations csv is merged with the bandsraw csv using `left_join` by `Band Name` in order to keep all coordinate data stored in the locations csv. This joined dataframe is stored in the bands variable.
+
+```{r}
+#Storing all changes in the chunk in the band variable 
+bands <- locations %>%
+#Joining locations and bandsraw with a left join to preserve all band location data
+  left_join(
+    bandsraw %>%
+#Renaming Labour Force status (8) 8 and selecting the columns that will be displayed in the final dataframe. 
+      rename(`Band name` = `Labour force status (8) 8`) %>%
+      select(`Band name`, `In the labour force`, `Not in the labour force`, 
+             Employed, Unemployed, `Participation rate`, `Employment rate`, `Unemployment rate`) %>%
+#Removing character string stored in the values of `Band name` for better join results
+      mutate(across(c(`Band name`), ~ str_remove_all(., " First Nation| Nation|\\-|\\(.*?\\)|Band(?!e)"))),
+    by = c("Band name" = "Band name")
+  ) 
+```
+
+In this section we are using `knnImputation` to fill in missing values in the numeric columns. The "." and "," found within `select()` and `ifelse()` are not just character strings. The "," indicates that there are more operations to be conducted further in the pipeline while "." is a placeholder for the current dataset. As previously mentioned, `k = 7` represents the number of neighbours that will be considered for each missing value. The `cur_column()` function gets the name of the current column being imputed.
+
+```{r}
+#Preform KNN imputation on all numeric columns in the bands dataframe
+bands <- bands %>%
+#{} is used in order to preform multiple commands on the piped data.   
+  { 
+#Define the columns that knn imputation will be preformed on
+    numcols <- c("In the labour force", "Employed", "Unemployed", "Not in the labour force")
+#Store the imputed values 
+    imputedvals <- knnImputation(select(., all_of(numcols)), k = 7)
+#Use the mutate function to update missing values in the current column with the imputed value     
+    mutate(., 
+           across(all_of(numcols), 
+                  ~ ifelse(is.na(.), imputedvals[[cur_column()]], .)))
+  } 
+```
+
+In this chunk we are rounding the numeric columns to their nearest whole number and converting them back into integers using `round()` and `as.integer` functions. The "." in `round()` is a placeholder for the dataframe that is currently being manipulated (bands csv). There are subsequent `ifelse()` and `is.na`, and `get_mode` functions used to impute the mode value derived from `get_mode` if the current row is missing values. `factor()` converts all levels to a factor. The "." in `factor()` represnts the current column being processed. The final portion of the code updates the bin labels with 1-6 representing the lowest rate(\<20%) to highest rate (\<80%) and all respective levels in between.
+
+```{r}
+#Select the columns that will be manipulated in the bands csv
+bands <- bands %>%
+  mutate(
+    across(c("In the labour force", "Employed", "Unemployed", "Not in the labour force"), 
+#Round the selected values and convert them to integer values 
+           ~ round(.) %>% as.integer()),
+#If the current value is NA impute it with the value returned from get_mode
+    across(c("Participation rate", "Employment rate", "Unemployment rate"),
+           ~ ifelse(is.na(.), get_mode(.), .)),
+#Here we are casting the rate columns as factors and defining the bin labels
+    across(c("Participation rate", "Employment rate", "Unemployment rate"),
+           ~ factor(., levels = c("<20%", "20%-39%", "40%-59%", "60%-79%", "≥80%"),
+                    labels = c("1", "2", "3", "4", "5")))
+  ) 
+```
+
+This is the data tidying section of the pipeline. Here, we are defining and concatenating the columns that will be pivoted using `c()` . using `names_to` we will name the column that will hold the descriptors for the rate and labour status values. They will be named `Rate Type` and `Labour Status` . `values_to` will name the columns that will store the rate and labour status values.
+
+```{r}
+#Transform the final dataset using tidyverse principles
+bands <- bands %>% 
+#Pivot all the rate column values to the rate value column and column names to Rate type 
+  pivot_longer(
+    cols = c("Participation rate", "Employment rate", "Unemployment rate"),
+    names_to = "Rate Type",
+    values_to = "Rate Value"
+  ) %>%
+#Pivot all the labour force valuesto the count column and labour status description to Labour Status
+  pivot_longer(
+    cols = c("In the labour force", "Not in the labour force", "Employed", "Unemployed"),
+    names_to = "Labour Status",
+    values_to = "Count"
+  )
+```

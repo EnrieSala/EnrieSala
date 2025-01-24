@@ -1,0 +1,342 @@
+# Exploratory Data Analysis of (Geospatial) Data Report
+
+## Data Selection
+
+For Project 2, I am continuing to analyze the dataset created in Project 1, which combined geographical data from *First Nations' Locations* with labour force statistics from *Membership in a First Nation or Indian band by labour force status: Canada, provinces and territories*. To enhance the analytical potential, I augmented this dataset by incorporating previously filtered gender-based labour force statistics, allowing for deeper examination of employment patterns across different gender categories within Indigenous communities. This modification enables more comprehensive analysis of labour force participation while maintaining the spatial context established in Project 1.
+
+In addition to augmenting the main dataset with gender-based labour force statistics, I created a secondary table called "genderpop" to address issues related to data structure and analysis. This separate table was necessary because the gender-based population data had a different structure than the main labour force statistics. By creating "genderpop," I could avoid data duplication issues that were arising when trying to combine all information into a single table. This approach allows for more accurate categorical variable analysis and prevents skewing of proportions in numerical analyses.
+
+The "genderpop" table contains detailed population counts for each Indigenous band, broken down by gender (men and women) and residence status (on-reserve and off-reserve). This structure enables more nuanced analyses of population distribution and gender-specific patterns within and across Indigenous communities. By keeping this data separate from the main labour force statistics, I can perform targeted analyses on gender-related demographics without compromising the integrity of the labour force data.
+
+By using two tables, I was able to conduct broad labour force analyses and specific gender-based population studies. It maintains the spatial context established in Project 1 while providing the flexibility to examine gender-specific trends in population distribution and, when combined with the main dataset, labour force participation.
+
+## Variable Description
+
+### **Labor Force Variables**
+
+-   **Labour Count**: Shows a mean of 318.65 and standard deviation of 564.54, with values ranging from 0 to 13,280
+
+-   **Rate**: Includes three categories - Employment rate (around 28,000), Participation rate (around 32,000), and Unemployment rate (around 13,000)
+
+### **Population Variables**
+
+-   **Population**: Has a mean of 278.16 and standard deviation of 506.54
+
+-   **Population Type**:
+
+    -   Total Men off Reserve
+
+    -   Total Men on Reserve
+
+    -   Total Women off Reserve
+
+    -   Total Women on Reserve
+
+### **Dataset Structure**
+
+-   **genderbands**: Contains 30,576 observations with 9 variables
+
+-   **genderpop**: Smaller dataset with 2,548 observations of 3 variables
+
+-   **subset**: Focused dataset with 30,576 observations of 4 variables, used for specific analyses
+
+## EDA Tasks
+
+First, we must load the csv's that contain ourdatasets. Here, we are using the read_csv function and storing the data in the variables genderbands and genderpop.
+
+```{r}
+# Load required libraries
+library(tidyverse)
+library(ggplot2)
+library(GGally)
+library(pheatmap)
+
+#Create variables for the datasets and store them
+genderbands <- read_csv('C:\\Fall 2024 Semester NSCC\\GDAA_1001\\Projects\\Project2\\Data\\indigenousbandsgender.csv')
+
+genderpop <- read_csv('C:\\Fall 2024 Semester NSCC\\GDAA_1001\\Projects\\Project2\\Data\\indigenousbandsgender2.csv')
+
+```
+
+In preparation for exploratory data analysis (EDA), I loaded R packages for data manipulation and visualization, then creates a focused subset of three key variables (Labour Count, Rate, and Population) from the genderbands dataset. This subset is used for statistical calculations, including descriptive statistics for both Population (mean, standard deviation, and range) and Labour Count (mean of 318.65, standard deviation of 564.34, and range from 0 to 13,280). By making these changes, we can now create boxplots in both log-transformed and original scales. with this dataset This helps in comparing different categories and identifying outliers and distribution patterns. Applying the parameter `na.rm = TRUE` ensures that calculations are accurate by excluding any missing values.
+
+```{r}
+
+# Analyze Count, Rate Value, and Population
+# Create subset for numeric analysis
+subset <- genderbands %>%
+  # Select only these three columns for analysis
+  select("Labour Count", Rate, Population, "Population Type")
+  
+  # Calculate Population statistics
+  mean_population <- mean(genderbands$Population, na.rm = TRUE)
+  sd_population <- sd(genderbands$Population, na.rm = TRUE)
+  range_population <- range(genderbands$Population, na.rm = TRUE)
+
+  # Calculate Labour Count statistics
+  mean_labourcount <- mean(genderbands$`Labour Count`, na.rm = TRUE)
+  sd_labourcount <- sd(genderbands$`Labour Count`, na.rm = TRUE)
+  range_labourcount <- range(genderbands$`Labour Count`, na.rm = TRUE)
+```
+
+# 1. Single Variable Numerical Analysis
+
+## Labour Count Analysis
+
+### Density Overlay on Bar Graph
+
+The Labour Count data shows extreme right skew as most values are concentrated at the bottom with outliers reaching up to 13,000. To address this skewed distribution, a logarithmic transformation is applied to the x-axis, which effectively spreads out the compressed values and reveals the underlying structure of the data. This transformation is particularly useful because the data spans several orders of magnitude, from small labour counts to very large ones. The resulting visualization combines a histogram with a density curve overlay, allowing us to see both the discrete binned distribution (blue bars) and the continuous probability density estimate (red line). The log transformation makes patterns in the data more visible, particularly the presence of multiple peaks that suggest distinct clusters of labour force sizes across different Indigenous bands.
+
+```{r}
+# Create a ggplot object using the subset data, mapping Labour Count as x-value
+labouroverlay <- ggplot(subset, aes(x = `Labour Count`)) +
+  # Add histogram with density scaling, 30 bins, colored blue with 50% transparency
+  geom_histogram(aes(y = after_stat(density)), bins = 30, 
+                fill = "blue", alpha = 0.5) +
+  # Overlay a density curve in red
+  geom_density(color = "red") +
+  theme_minimal() +
+    # Add descriptive labels for the plot
+  labs(title = "Distribution of Count Values (Log Scale)",
+       x = "Labour Count (log10 scale)",
+       y = "Probability Density") +
+  # Transform x-axis to logarithmic scale
+  scale_x_log10()
+print(labouroverlay)
+```
+
+### Log Transformed Box Plot
+
+This code creates a boxplot to visualize the distribution of Labour Count values in the dataset. The boxplot is particularly useful for displaying the spread and central tendency of the data, as well as identifying potential outliers. By applying a logarithmic transformation to the y-axis (scale_y_log10()), the code addresses the extreme right-skew evident in the original data distribution. This transformation spreads out the compressed values at the lower end of the scale, revealing the underlying structure of the data that spans several orders of magnitude. The resulting plot shows a more balanced distribution, with the box (representing the interquartile range) centered around 100-300 on the log scale. Multiple outliers are visible both above and below the whiskers, indicating unusual labour count values in some Indigenous bands. This visualization effectively highlights the variability in labour force sizes across different communities, which was obscured in the original scale due to the presence of very large outliers.
+
+## Population Analysis
+
+### Density Overlay on Bar Graph
+
+This code combines histograms and density curves to show the distribution of population values across different gender and location categories (Men/Women on/off reserve). The logarithmic transformation of the x-axis is crucial because, like the Labour Count data shown in the boxplots, the Population data likely exhibits extreme right skew. The overlay of both histogram and density plots provides two complementary ways to understand the distribution: the histogram shows the actual frequency of values in bins, while the density curves smooth out these frequencies to show the overall shape of the distribution. By using different fill colors for each Population Type, the plot reveals how population sizes vary between different gender and location categories. The transparency (alpha = 0.5) allows overlapping distributions to be visible, making it easier to compare patterns between groups.
+
+```{r}
+# Create a ggplot object using the subset data, mapping Labour Count to y-axis
+populationoverlay <- ggplot(subset, aes(x = Population, fill = `Population Type`)) +
+  # Add histogram with density scaling, 30 bins, and 50% transparency
+  geom_histogram(aes(y = after_stat(density)), bins = 30, alpha = 0.5) +
+  # Add density curves with 50% transparency for each Population Type
+  geom_density(alpha = 0.5) +
+  theme_minimal() +
+  # Add descriptive labels for the plot
+  labs(title = "Distribution of Population Values by Gender (Log Scale)",
+       x = "Population (log10 scale)",
+       y = "Probability Density") +
+  # Transform x-axis to logarithmic scale
+  scale_x_log10() +
+  # Rotate x-axis labels 45 degrees for better readability
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+print(populationoverlay)
+```
+
+## Population Distribution Boxplot
+
+This code creates a boxplot visualization to compare population distributions across different gender and location categories (Men/Women on/off reserve). The boxplot is particularly useful for displaying the spread, central tendency, and potential outliers within each category. By using a logarithmic scale for the y-axis (scale_y_log10()), the code addresses potential right-skew in the population data, similar to what we observed in the Labour Count visualizations. This transformation allows for better comparison of distributions that may span several orders of magnitude. The blue fill with 50% transparency (alpha = 0.5) enhances readability, while the minimal theme and rotated x-axis labels improve overall aesthetics. This visualization enables easy comparison of population sizes and distributions between different gender and location groups, potentially revealing important demographic patterns within the Indigenous communities represented in the dataset.
+
+```{r}
+# Create a ggplot object with Population Type on x-axis and Population on y-axis
+populationboxplot <- ggplot(subset, aes(x = `Population Type`, y = Population)) +
+  # Add boxplot with blue fill and 50% transparency
+  geom_boxplot(fill = "blue", alpha = 0.5) +
+  theme_minimal() +
+  # Add title and axis labels
+  labs(title = "Distribution of Population Values by Gender",
+       x = "Population Type",
+       y = "Population Count") +
+  # Transform y-axis to logarithmic scale
+  scale_y_log10() +
+  # Rotate x-axis labels 45 degrees for better readability
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+print(populationboxplot)
+```
+
+## Interpreting Results:
+
+The data visualizations show population and labor distribution patterns across different demographics (men and women on/off the reserve). The labor count distribution, shown on a log10 scale, has the largest peak around 400-500 count values, with a secondary smaller peak around 50-100. The distribution has a long right tail extending towards 10,000, indicating some areas with very high labor counts.
+
+When examining the population values by gender, both on and off reserve populations show similar patterns but with considerable differences in their distributions. The box plots show that median population values fall between 100-300 individuals across all categories, with "Total Men off Reserve" and "Total Women off Reserve" showing slightly higher medians than their on-reserve counterparts. Outliers in all categories extend up to approximately 10,000 individuals, represented by dots above the whiskers.
+
+The probability density distribution (shown in the third graph) further demonstrates the overlap between different population types, with all four categories showing similar shapes but slightly different peaks. The distributions are concentrated between 100 and 1000 on the log10 scale, with the highest density occurring around 200-300 for most categories. This graph effectively shows how the populations are distributed across different scales while maintaining the ability to compare between genders and on/off reserve status.
+
+# 2. Correlation Analysis (Numeric Variables)
+
+This chunk creates a correlation matrix using GGally's ggpairs() function to analyze relationships between numeric variables in the subset dataframe (Labour Count, Rate, and Population). The function automatically generates; Scatterplots for each pair of variables, correlation coefficients, density plots on the diagonal and finally, Log-transformed visualizations to handle right-skewed distributions.
+
+This provides a comprehensive view of both the individual variable distributions and how they are related in a single matrix.
+
+## Numeric Variables Correlation Matrix
+
+```{r}
+# Create a correlation matrix visualization using GGally's ggpairs function
+# Takes the subset dataframe containing Labour Count, Rate, and Population
+correlation_plot <- ggpairs(subset,
+                          title = "Correlation Matrix of Numeric Variables")
+print(correlation_plot)
+```
+
+## Labour Count vs Population Scatter Plot
+
+This code creates a scatter plot using ggplot2 to visualize Labour Count versus Population data. It applies log transformations to both axes through log10(), adds color differentiation by Population Type, and includes point transparency (alpha) to handle overlapping data points. The minimal theme and descriptive labels enhance the plot's readability. The print() function displays the final visualization.
+
+```{r}
+# Create a ggplot object with log-transformed Labour Count and Population, colored by Population Type
+scatter_log <- ggplot(subset, 
+                     aes(x = log10(`Labour Count`), 
+                         y = log10(Population),
+                         color = `Population Type`)) +
+  # Add points with 50% transparency to handle overlapping
+  geom_point(alpha = 0.5) +
+  theme_minimal() +
+  # Add title and axis labels
+  labs(title = "Labour Count vs Population by Population Type (Log Scale)",
+       x = "Labour Count (log10)",
+       y = "Population (log10)")
+print(scatter_log)
+```
+
+## Interpreting Results
+
+The correlation matrix and scatter plot highlight key patterns between labor count and population across different population types. The data shows a significant positive correlation (0.654) between labor count and population. This means that as the labor count increases, the population tends to increase as well.
+
+The scatter plot, displayed on a log10 scale, demonstrates this positive relationship across all population categories (Total Men off Reserve, Total Men on Reserve, Total Women off Reserve, and Total Women on Reserve). The data points form a clear upward trend, though there is some scatter in the relationship. The correlation between Rate and other variables appears to be minimal, with a very weak positive correlation (0.002) with Labor Count and a slight negative correlation (-0.010) with Population. The distribution of data points shows some clustering patterns, particularly in the middle range of labor counts, with some outliers at both the higher and lower ends of the scale.
+
+The log-scale presentation of the data helps to better visualize the relationship by normalizing the wide range of values present in both labor count and population measurements. can you rewrite this again
+
+# 3. Single Categorical Variable Analysis
+
+This code uses the ggplot2 package in R to create a series of visualizations that analyze population and employment data based on gender, location, and rate types.
+
+The first part of the code generates frequency and proportion tables for the "Population Type" variable, providing a summary of the distribution of different population categories. These proportions are calculated by dividing each frequency by the total count, offering insights into the relative sizes of each group.
+
+## Distribution of Employment Rates
+
+The first plot displays employment rate distributions across three categories: Employment rate, Participation rate, and Unemployment rate. The visualization uses simple blue bars to represent the rates, making it straightforward to compare the values between categories.
+
+## Population Distribution
+
+The second visualization uses a stacked bar plot to compare gender distributions. By using **`grepl()`** to detect "Women" in the Population Type, it separates and stacks male and female populations. This shows both the total population size and the gender breakdown for each category.
+
+## Proportional Population Distribution
+
+The third plot creates a proportional visualization of on/off reserve populations. Using **`position = "fill"`** standardizes each bar to show percentages rather than absolute numbers, making it easier to compare the relative distribution of on-reserve versus off-reserve populations across different groups.
+
+```{r}
+# Create frequency and proportion tables for Population Type
+pop_type_freq <- table(genderpop$`Population Type`)
+# Calculate proportions by dividing each frequency by total
+pop_type_prop <- prop.table(pop_type_freq)
+
+# Create bar plot for Employment Rate distribution
+ggplot(genderbands, aes(x = `Rate Type`, y = `Rate`)) +
+  # Add bar geometry with solid bars
+  geom_bar(stat = "identity", fill = "blue", alpha = 0.7) +
+  theme_minimal() +
+  #Adjust labels to improve readability 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  #Add title and axis labels
+  labs(title = "Distribution of Employment Rates",
+       x = "Rate Type",
+       y = "Rate")
+
+# Create stacked bar plot comparing Men vs Women populations
+ggplot(genderpop, aes(x = `Population Type`, y = `Population Count`, 
+                                  # Use grepl to detect "Women" in Population Type
+                                  fill = grepl("Women", `Population Type`))) +
+  # Stack bars for comparison
+  geom_bar(stat = "identity", position = "stack") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  # Customize legend
+  scale_fill_discrete(name = "Gender", labels = c("Men", "Women")) +
+  # Add labels
+  labs(title = "Population Distribution by Gender and Location",
+       x = "Population Type",
+       y = "Population Count")
+
+# Create proportional bar plot for on/off reserve distribution
+ggplot(genderpop, aes(x = `Population Type`, y = `Population Count`,
+                                  # Use grepl to detect "off Reserve"
+                                  fill = grepl("off Reserve", `Population Type`))) + # Create proportional bars
+  geom_bar(stat = "identity", position = "fill") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  # Customize legend
+   scale_fill_discrete(name = "Location", labels = c("On Reserve", "Off Reserve")) +
+  # Add labels
+  labs(title = "Proportion of On/Off Reserve Population by Type",
+       x = "Population Type",
+       y = "Proportion")
+```
+
+## Interpreting Results
+
+[Employment Rate Distribution]{.underline}
+
+The employment rates graph shows three key metrics: Employment rate, Participation rate, and Unemployment rate. The participation rate is highest at approximately 32,000, followed closely by the employment rate at around 28,000. The unemployment rate is significantly lower at roughly 13,000. This distribution indicates a relatively healthy labor market with participation and employment rates significantly higher than unemployment.
+
+[Gender Population Distribution]{.underline}
+
+The second graph uses color coding to show that women slightly outnumber men in the total population, with approximately 175,000 women compared to about 155,000 men in the off-reserve category. The on-reserve population shows slightly lower numbers for both genders, with roughly 110,000 men and 110,000 women. This stacked bar plot effectively demonstrates the relative gender balance within both on-reserve and off-reserve populations, showing near-equal gender distribution in both settings.
+
+[On/Off Reserve Proportions]{.underline}
+
+The third visualization uses proportional bars to show the relative distribution between on-reserve and off-reserve populations. The plot reveals that the proportion of off-reserve to on-reserve residents remains consistent across gender categories, with approximately equal proportions for both men and women.
+
+# 4. Multiple Categorical Variable Analysis
+
+This code creates a heatmap to visualize the distribution of Indigenous populations across various bands and population types, using a tile-based layout that forms a clear grid where each cell represents a specific band and population type combination.
+
+The dataset was sampled down to 2,000 entries due to the large size of the original data. This was done so that the resulting heatmap can be interpreted. A logarithmic color scale is applied to handle the wide range of population values, which span from 0 to over 12,730 (e.g., Qalipu Mi'kmaq Women off Reserve).
+
+The heatmap features a white-to-dark green color gradient, with lighter shades representing smaller populations (10–100 people) and darker shades indicating larger populations (1,000+ people).
+
+Customized text formatting and increased spacing between band names improve readability, while band names are arranged along the y-axis to accommodate the large number of First Nations communities. Logarithmic scaling ensures effective visualization of the wide variation in population counts.
+
+```{r}
+# Sample the first 2000 rows from the genderbands dataset
+sample_genderbands <- head(genderbands, 2000)
+
+# Create a ggplot visualization with Band name on y-axis, Population Type on x-axis
+ggplot(sample_genderbands, 
+       aes(y = `Band name`, x = `Population Type`, fill = Population)) +
+  # Add rectangular tiles colored by Population value
+  geom_tile() +
+  # Define color gradient from white to dark green with logarithmic scale
+  scale_fill_gradient2(
+    low = "white",
+    high = "darkgreen",
+     # Transform scale to handle wide range of population values
+    trans = "log10"
+  ) +
+  theme_minimal() +
+  theme(
+    #Adjust labels 
+    axis.text.y = element_text(size = 6, lineheight = 2.2),
+    axis.text.x = element_text(angle = 45, hjust = 1, vjust = 1),
+    # Remove grid lines
+    panel.grid = element_blank()
+  # Add title and legend label
+  ) +
+  labs(title = "Population Distribution by Band and Type (Sample)",
+       fill = "Population Count (log scale)")
+  coord_fixed(ratio = 0.3)
+```
+
+## Interpreting Results
+
+The heatmap patterns in Indigenous population distribution, with population sizes varying widely across bands. Larger First Nations, such as Norway House Cree, show consistently high on-reserve populations (2,500+), while many communities, especially in urban areas, have substantial off-reserve populations, often with large contrasts between on and off-reserve numbers. Women tend to have higher off-reserve populations, while on-reserve populations show more balanced gender ratios, with exceptions like Qalipu Mi'kmaq displaying large off-reserve populations for both genders.
+
+Geographic trends highlight higher on-reserve populations in northern communities and larger off-reserve numbers in southern or urban-adjacent bands. Notable population centers include Norway House Cree, Siksika, and Peter Ballantyne Cree for on-reserve populations, and Qalipu Mi'kmaq and Six Nations of the Grand River for off-reserve populations. Minimal populations in certain categories are represented by white tiles.
+
+# Conclusion
+
+The data highlights key insights into Indigenous employment and population distribution. Employment rates show significant challenges, with participation around 32,000, employment near 28,000, and unemployment at approximately 13,000. Women slightly outnumber men in the population, with 175,000 women and 155,000 men on-reserve, compared to 115,000 for each gender off-reserve. Both genders show a preference for on-reserve residence, particularly women, who exhibit a larger on-to-off-reserve differential. Despite higher on-reserve populations, significant employment challenges persist, as indicated by the gap between participation and employment rates. This reflects a complex relationship between gender, residence choice, and employment opportunities in Indigenous communities.
+
+Geographic variations further illustrate the complexities of Indigenous employment; northern communities often have higher on-reserve populations, while southern and urban-adjacent bands frequently exhibit larger off-reserve populations. Additionally, many Indigenous women work part-time compared to their male counterparts, reflecting broader trends in labor market participation.
+
+To enhance the accuracy and depth of our understanding, more dataset samples are needed, particularly for creating additional heatmaps to compare different population samples. Expanding the data collection would enable better identification of trends and challenges faced by Indigenous communities regarding employment, gender disparities, and the impact of residence on economic opportunities. By comparing heatmaps of different population samples, we can obtain a more accurate representation of population distribution based on gender and location, which could inform more targeted interventions to improve employment outcomes for Indigenous populations across various regions and demographics.
