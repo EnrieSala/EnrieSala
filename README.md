@@ -21,13 +21,15 @@ Software: Microsoft Office 365, Windows OS, Catalyst Pro, Agisoft Pro Photo Scan
 
 Analyzed San Diego municipal sanitary sewer system (ESRI Academy training)
 
-[Created municipal infrastructure databases for Annapolis County](https://github.com/EnrieSala/EnrieSala/blob/main/assets/LawrenceTownAssignment2Final.jpg)
+[Created municipal infrastructure databases for Annapolis County](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/LawrenceTownMap)
 
-[Developed ArcGIS Instant Application for Halifax Municipality's playground equipment inventory](https://github.com/EnrieSala/EnrieSala/blob/main/assets/HalifaxOutdoorRecreationEquipmentHeatMapInstantApp)
+[Developed ArcGIS Instant Application for Halifax Municipality's playground equipment inventory](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/HalifaxMunicipalityOutdoorRecEquipmentHeatMap)
 
 Implemented accessibility mapping systems for Ottawa-Carleton municipal facilities
 
 Processed geographic data for Nova Scotia mining sites evaluations
+
+[ETL and Project](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/FirstNationsEmploymentStatisticsAnalysis)
 ## Work Experience
 
 Route Setter - Junction Climbing Centre (March 2023 - Present)
