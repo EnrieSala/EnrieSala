@@ -29,7 +29,7 @@ Implemented accessibility mapping systems for Ottawa-Carleton municipal faciliti
 
 Processed geographic data for Nova Scotia mining sites evaluations
 
-[ETL and Project](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/FirstNationsEmploymentStatisticsAnalysis)
+[EDA and ETL of First Nations Employment Statistics](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/FirstNationsEmploymentStatisticsAnalysis)
 ## Work Experience
 
 Route Setter - Junction Climbing Centre (March 2023 - Present)
