@@ -21,7 +21,7 @@ Software: Microsoft Office 365, Windows OS, Catalyst Pro, Agisoft Pro Photo Scan
 
 Analyzed San Diego municipal sanitary sewer system (ESRI Academy training)
 
-Created municipal infrastructure databases for Annapolis County
+[Created municipal infrastructure databases for Annapolis County](https://github.com/EnrieSala/EnrieSala/blob/main/assets/LawrenceTownAssignment2Final.jpg)
 
 Developed ArcGIS Instant Application for Halifax Municipality's playground equipment inventory
 
