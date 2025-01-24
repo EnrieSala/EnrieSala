@@ -23,7 +23,7 @@ Analyzed San Diego municipal sanitary sewer system (ESRI Academy training)
 
 [Created municipal infrastructure databases for Annapolis County](https://github.com/EnrieSala/EnrieSala/blob/main/assets/LawrenceTownAssignment2Final.jpg)
 
-Developed ArcGIS Instant Application for Halifax Municipality's playground equipment inventory
+[Developed ArcGIS Instant Application for Halifax Municipality's playground equipment inventory](https://github.com/EnrieSala/EnrieSala/blob/main/assets/HalifaxOutdoorRecreationEquipmentHeatMapInstantApp)
 
 Implemented accessibility mapping systems for Ottawa-Carleton municipal facilities
 
