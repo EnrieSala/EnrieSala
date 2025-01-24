@@ -40,5 +40,4 @@ Multiple Scholarship Recipient
 30+ Hours of ESRI Academy Training
 ## Contact
 
-[Include your preferred contact method here]
 Feel free to explore my repositories to see examples of my GIS projects and coding skills!
