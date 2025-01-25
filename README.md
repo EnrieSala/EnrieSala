@@ -1,6 +1,6 @@
 # Enrie Sala - GIS Specialist
 ## About Me
-I'm an aspiring GIS specialist with a strong background in biology and environmental sciences, currently pursuing an Advanced GIS Post-Graduate Certificate at Nova Scotia Community College. I'm passionate about leveraging geospatial technology to solve complex municipal and environmental challenges.
+I'm a GIS specialist with a strong background in biology and environmental sciences, currently pursuing an Advanced GIS Post-Graduate Certificate at Nova Scotia Community College. Feel free to explore my [repositories](https://github.com/EnrieSala/EnrieSala/tree/main/Assets) to see examples of my GIS projects and coding skills!
 
 ## Education
 Advanced GIS Post-Graduate Certificate - Nova Scotia Community College (Sep 2024 - Present)
@@ -45,4 +45,3 @@ Multiple Scholarship Recipient
 30+ Hours of ESRI Academy Training
 ## Contact
 
-Feel free to explore my repositories to see examples of my GIS projects and coding skills!
