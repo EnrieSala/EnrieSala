@@ -3,8 +3,7 @@
 ## Overview
 ForestStandSuitability is a Python script designed for QGIS that analyzes and categorizes forest stands based on their suitability as North Mountain Cougar habitat. The script uses data from the Nova Scotia Department of Natural Resources (NSDNR) forestry dataset.
 ## Features
-Analyzes forest stands based on leading species
-Calculates habitat suitability using three criteria:
+Analyzes forest stands based on leading species and calculates habitat suitability using three criteria:
 * Average Tree Diameter (AVDI), Forest Stand Average Tree Height (HEIGHT), Cover Type (COVER_TYPE)
 * Generates a summary report of low, medium, and high suitability areas
 * Allows for multiple analyses with different leading species
@@ -17,8 +16,7 @@ QGIS with Python 3.x and NSDNR forestry dataset loaded as the active layer in QG
 4. Review the generated suitability report.
 5. Choose to run the analysis again with a different species or exit.
 ## Output
-The script generates a formatted report displaying:
-Number of polygons for each suitability category, minimum and maximum area of stands for each category and total area and average area of stands for each category.
+The script generates a formatted report displaying the number of polygons for each suitability category, minimum and maximum area of stands for each category and total area and average area of stands for each category.
 ## Script Drawbacks 
 - Limited error handling for unexpected inputs or missing data
 - Hard-coded values for suitability ratings, which may not be suitable for all forest types
