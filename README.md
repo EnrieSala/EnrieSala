@@ -13,7 +13,11 @@ Spatial Analysis: LiDAR Data, Satellite Imagery, Environmental Mapping
 
 Software: Microsoft Office 365, Windows OS, Catalyst Pro, Agisoft Pro Photo Scanner
 
-## Key Term Projects 
+## Key Term Projects
+
+[Forest Suitability Analysis with Simulated Data](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
+
+[EDA and ETL of First Nations Employment Statistics](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/FirstNationsEmploymentStatisticsAnalysis)
 
 Analyzed San Diego municipal sanitary sewer system (ESRI Academy training)
 
@@ -25,9 +29,6 @@ Implemented accessibility mapping systems for Ottawa-Carleton municipal faciliti
 
 Processed geographic data for Nova Scotia mining sites evaluations
 
-[EDA and ETL of First Nations Employment Statistics](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/FirstNationsEmploymentStatisticsAnalysis)
-
-[Forest Suitability Analysis with Simulated Data](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
 ## Achievements
 
 Current GPA: 93.2
