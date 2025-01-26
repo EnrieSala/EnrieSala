@@ -18,9 +18,7 @@ QGIS with Python 3.x and NSDNR forestry dataset loaded as the active layer in QG
 5. Choose to run the analysis again with a different species or exit.
 ## Output
 The script generates a formatted report displaying:
--  Number of polygons for each suitability category
-- Minimum and maximum area of stands for each category
-- Total area and average area of stands for each category
+Number of polygons for each suitability category, minimum and maximum area of stands for each category and total area and average area of stands for each category.
 ## Script Drawbacks 
 - Limited error handling for unexpected inputs or missing data
 - Hard-coded values for suitability ratings, which may not be suitable for all forest types
