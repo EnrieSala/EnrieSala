@@ -28,12 +28,6 @@ Processed geographic data for Nova Scotia mining sites evaluations
 [EDA and ETL of First Nations Employment Statistics](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/FirstNationsEmploymentStatisticsAnalysis)
 
 [Forest Suitability Analysis with Simulated Data](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
-## Work Experience
-
-Route Setter - Junction Climbing Centre (March 2023 - Present)
-
-Optometric Assistant - Ambassador Eyewear (July 2021 - August 2022)
-Server - Hikari (October 2019 - March 2022)
 ## Achievements
 
 Current GPA: 93.2
@@ -41,5 +35,4 @@ Current GPA: 93.2
 Multiple Scholarship Recipient
 
 30+ Hours of ESRI Academy Training
-## Contact
 
