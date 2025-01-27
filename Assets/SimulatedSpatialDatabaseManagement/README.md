@@ -12,20 +12,20 @@ The database consists of five main tables:
 facility (point features), river (line features), road (line features), forest (polygon features), foreststand (polygon features) Each table has a geometry column to store spatial data.
 ## Sample Queries
 The script includes several spatial queries, such as:
-Finding the area of the largest forest stand
-Calculating the total length of roads by composition
-Identifying facilities within specific forest stands
-Determining distances between park features
-Installation and Setup
-Prerequisites
+- Finding the area of the largest forest stand
+- Calculating the total length of roads by composition
+- Identifying facilities within specific forest stands
+- Determining distances between park features
+## Installation and Setup
+### Prerequisites
 PostgreSQL with PostGIS extension installed
-Instructions
-Create a new PostgreSQL database
-Enable the PostGIS extension in the database
-Run the SQL script Assignment4SalaEnrieFinal.sql in your PostgreSQL environment
-Usage
+### Instructions
+1. Create a new PostgreSQL database
+2. Enable the PostGIS extension in the database
+3. Run the SQL script Assignment4SalaEnrieFinal.sql in your PostgreSQL environment
+## Usage
 After running the script, you can execute the provided spatial queries or create your own to analyze the State Park data.
-Sample Output
+### Sample Output
 Here's an example of a query and its output:
 sql
 -- List the total length of roads, by composition
@@ -41,7 +41,7 @@ GR               | 123.45
 PV               | 98.76
 Known Issues
 The spatial reference system used (0) is a simplified Cartesian coordinate system and may not accurately represent real-world geography.
-To-Do
+## To-Do
 Add more complex spatial queries for advanced analysis
 Implement a user interface for easier data visualization
 Expand the database to include more park features (e.g., hiking trails, wildlife habitats)
