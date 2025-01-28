@@ -4,17 +4,6 @@ I'm a GIS specialist with a strong background in biology and environmental scien
 
 Contact me @ [enrie98@gmail.com](mail.google.com.) if you have any questions.
 
-## Technical Skills
-GIS Software: ESRI ArcGIS suite (AGOL, ArcGIS Pro, ArcGIS Instant Apps)
-
-Programming: R, Python, SQL, HTML
-
-Database Management: SQL Servers, POS Systems
-
-Spatial Analysis: LiDAR Data, Satellite Imagery, Environmental Mapping
-
-Software: Microsoft Office 365, Windows OS, Catalyst Pro, Agisoft Pro Photo Scanner
-
 ## Key Term Projects
 
 - [Forest Suitability Analysis with Simulated Data](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
