@@ -1,6 +1,8 @@
 # Enrie Sala - GIS Specialist
 ## About Me
-I'm a GIS specialist with a strong background in biology and environmental sciences, currently pursuing an Advanced GIS Post-Graduate Certificate at Nova Scotia Community College. Feel free to explore my [repository](https://github.com/EnrieSala/EnrieSala/tree/main/Assets) to see examples of my GIS projects and coding skills!
+I'm a GIS specialist with a strong background in biology and environmental sciences, currently pursuing an Advanced GIS Post-Graduate Certificate at Nova Scotia Community College. Feel free to explore my [repository](https://github.com/EnrieSala/EnrieSala/tree/main/Assets) to see examples of my GIS projects and coding skills! 
+
+Contact me @ [enrie98@gmail.com](mail.google.com.) if you have any questions.
 
 ## Technical Skills
 GIS Software: ESRI ArcGIS suite (AGOL, ArcGIS Pro, ArcGIS Instant Apps)
@@ -27,12 +29,7 @@ Software: Microsoft Office 365, Windows OS, Catalyst Pro, Agisoft Pro Photo Scan
 
 - [Oxford County Land Cover Classification](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/OxfordCountyLandCoverClassification)
 
-- 
-## Achievements
+- [Simulated Habitat Analysis](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
 
-Current GPA: 93.2
 
-Multiple Scholarship Recipient
-
-30+ Hours of ESRI Academy Training
 
