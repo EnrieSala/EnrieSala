@@ -32,17 +32,12 @@ The script performs the following main operations:
 - Access to NSDNR forestry dataset
 
 ## Instructions
-1. Open QGIS and load the forestry shapefile
+1. Open QGIS and load the NSDNR forestry dataset into QGIS and ensure it's the active layer.
 2. Ensure the forestry layer is active (selected) in QGIS
-3. Open the Python Console in QGIS
-4. Copy the script into the Python Console or load it from a file
-
-## Usage
-1. Load the NSDNR forestry dataset into QGIS and ensure it's the active layer.
-2. Run the script from the QGIS Python console.
-3. Select a leading species from the provided list.
-4. Review the generated suitability report.
-5. Choose to run the analysis again with a different species or exit.
+3. Open the Python Console in QGIS and run the script from the QGIS Python console.
+4. Select a leading species from the provided list.
+5. Review the generated suitability report.
+6. Choose to run the analysis again with a different species or exit.
 
 Sample Output
 ===================================================================
