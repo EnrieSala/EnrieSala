@@ -37,7 +37,7 @@ SELECT composition AS "Road Composition",
 FROM road
 GROUP BY composition;
 Output:
-text
+
 Road Composition | Total Road Length
 ------------------+-------------------
 GR               | 123.45
