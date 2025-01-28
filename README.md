@@ -23,6 +23,8 @@ Software: Microsoft Office 365, Windows OS, Catalyst Pro, Agisoft Pro Photo Scan
 
 [Developed ArcGIS Instant Application for Halifax Municipality's playground equipment inventory](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/HalifaxMunicipalityOutdoorRecEquipmentHeatMap)
 
+[Oxford County Land Cover Classification](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/OxfordCountyLandCoverClassification)
+
 Processed geographic data for Nova Scotia mining sites evaluations
 
 ## Achievements
