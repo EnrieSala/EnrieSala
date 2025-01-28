@@ -15,17 +15,17 @@ Software: Microsoft Office 365, Windows OS, Catalyst Pro, Agisoft Pro Photo Scan
 
 ## Key Term Projects
 
-[Forest Suitability Analysis with Simulated Data](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
+- [Forest Suitability Analysis with Simulated Data](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
 
-[EDA and ETL of First Nations Employment Statistics](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/FirstNationsEmploymentStatisticsAnalysis)
+- [EDA and ETL of First Nations Employment Statistics](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/FirstNationsEmploymentStatisticsAnalysis)
 
-[Created municipal infrastructure databases for Annapolis County](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/LawrenceTownMap)
+- [Created municipal infrastructure databases for Annapolis County](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/LawrenceTownMap)
 
-[Developed ArcGIS Instant Application for Halifax Municipality's playground equipment inventory](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/HalifaxMunicipalityOutdoorRecEquipmentHeatMap)
+- [Developed ArcGIS Instant Application for Halifax Municipality's playground equipment inventory](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/HalifaxMunicipalityOutdoorRecEquipmentHeatMap)
 
-[Oxford County Land Cover Classification](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/OxfordCountyLandCoverClassification)
+- [Oxford County Land Cover Classification](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/OxfordCountyLandCoverClassification)
 
-Processed geographic data for Nova Scotia mining sites evaluations
+- Processed geographic data for Nova Scotia mining sites evaluations
 
 ## Achievements
 
