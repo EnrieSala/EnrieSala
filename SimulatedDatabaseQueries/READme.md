@@ -39,7 +39,7 @@ The database stores GPS tracking system data  used for monitoring vehicles and p
 - 2004-07-01 00:00:45
 ...
 
-## TODO
+## To Do
 - Add error handling for queries
 - Optimize queries for large datasets
 - Create views for frequently used complex queries
