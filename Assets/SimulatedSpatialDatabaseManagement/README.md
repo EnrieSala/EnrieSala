@@ -26,9 +26,6 @@ PostgreSQL with PostGIS extension installed
 2. Enable the PostGIS extension in the database
 3. Run the SQL script Assignment4SalaEnrieFinal.sql in your PostgreSQL environment
 
-## Usage
-After running the script, you can execute the provided spatial queries or create your own to analyze the State Park data.
-
 ### Sample Output
 Here's an example of a query and its output:
 -- List the total length of roads, by composition
