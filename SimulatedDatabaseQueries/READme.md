@@ -34,9 +34,9 @@ The database stores GPS tracking system data  used for monitoring vehicles and p
 ## Sample Output - Query 1
 ### Date/Time of Vehicles in Motion on July 2004
 -------------------------------------------
-2004-07-01 00:00:15
-2004-07-01 00:00:30
-2004-07-01 00:00:45
+- 2004-07-01 00:00:15
+- 2004-07-01 00:00:30
+- 2004-07-01 00:00:45
 ...
 
 ## TODO
