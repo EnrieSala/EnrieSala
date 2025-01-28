@@ -6,7 +6,7 @@ Contact me @ [enrie98@gmail.com](mail.google.com.) if you have any questions.
 
 ## Key Term Projects
 
-- [Forest Suitability Analysis with Simulated Data](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
+- [Forest Stand Suitability Analysis with Simulated Data](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
 
 - [EDA and ETL of First Nations Employment Statistics](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/FirstNationsEmploymentStatisticsAnalysis)
 
@@ -18,8 +18,8 @@ Contact me @ [enrie98@gmail.com](mail.google.com.) if you have any questions.
 
 - [Oxford County Land Cover Classification](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/OxfordCountyLandCoverClassification)
 
-- [Simulated Habitat Analysis](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
+- [Wiildfire Detection using Imagery Enhancement Techniques](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/ImageEnhancementWildfireDetection)
 
--[Wiildfire Detection using Imagery Enhancement Techniques](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/ImageEnhancementWildfireDetection)
+-[Simulated Spatial Database Creation and Management using PostGreSQL](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedSpatialDatabaseManagement)
 
 
