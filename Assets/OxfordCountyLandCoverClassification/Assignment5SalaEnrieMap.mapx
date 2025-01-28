@@ -1,0 +1,5910 @@
+{
+  "type" : "CIMMapDocument",
+  "version" : "3.3.0",
+  "build" : 52636,
+  "mapDefinition" : {
+    "type" : "CIMMap",
+    "name" : "Map",
+    "uRI" : "CIMPATH=map/map.json",
+    "sourceModifiedTime" : {
+      "type" : "TimeInstant",
+      "start" : -62135596800000
+    },
+    "metadataURI" : "CIMPATH=Metadata/a0476dea535d9f3b947c39289c03adcf.xml",
+    "useSourceMetadata" : true,
+    "illumination" : {
+      "type" : "CIMIlluminationProperties",
+      "ambientLight" : 50,
+      "sunPositionX" : -0.61237243569579003,
+      "sunPositionY" : 0.61237243569579003,
+      "sunPositionZ" : 0.5,
+      "illuminationSource" : "AbsoluteSunPosition",
+      "sunAzimuth" : 315,
+      "sunAltitude" : 30,
+      "showStars" : true,
+      "enableAmbientOcclusion" : true,
+      "enableEyeDomeLighting" : true
+    },
+    "layers" : [
+      "CIMPATH=map/csrs_oxford2_accuracypoints.json",
+      "CIMPATH=map/reclassified_202412072033485501555.json",
+      "CIMPATH=map/segmented_202412072031533004055.json",
+      "CIMPATH=map/csrs_oxford2_tif.json",
+      "CIMPATH=Map/4d76e998dc854e81a3e865901b0e7a01.json",
+      "CIMPATH=map/boareflectance10m_mtd_m_clip.json"
+    ],
+    "defaultViewingMode" : "Map",
+    "mapType" : "Map",
+    "locators" : [
+      {
+        "type" : "CIMLocator",
+        "locatorType" : "Locator",
+        "name" : "XY provider",
+        "locatorURI" : "XY provider",
+        "enabled" : true
+      },
+      {
+        "type" : "CIMLocator",
+        "locatorType" : "Locator",
+        "name" : "ArcGIS World Geocoding Service",
+        "locatorURI" : "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/ArcGIS World Geocoding Service",
+        "suggestionsEnabled" : true,
+        "enabled" : true,
+        "suggestionsSupported" : true
+      }
+    ],
+    "groundElevationSurfaceLayer" : "CIMPATH=Map/620655093e8b4635a03fe49769195492.json",
+    "defaultColorVisionDeficiencyMode" : "None",
+    "standaloneTables" : [
+      "CIMPATH=map/confusionmatrix_202412072033398880215.json"
+    ],
+    "defaultExtent" : {
+      "xmin" : 406327.736116537068,
+      "ymin" : 5049440.23250205442,
+      "xmax" : 461188.294454517134,
+      "ymax" : 5082026.20282872021,
+      "spatialReference" : {
+        "wkt" : "PROJCS[\"NAD83_CSRS_2010_Nova_Scotia_UTM_Zone_20\",GEOGCS[\"GCS_CSRS_2010\",DATUM[\"D_CSRS_2010\",SPHEROID[\"Geodetic_Reference_System_of_1980\",6378137.0,298.257222100892]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",500000.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",-63.0],PARAMETER[\"Scale_Factor\",0.9996],PARAMETER[\"Latitude_Of_Origin\",0.0],UNIT[\"Meter\",1.0]]",
+        "xyTolerance" : 0.001,
+        "zTolerance" : 0.001,
+        "mTolerance" : 0.001,
+        "falseX" : -5120900,
+        "falseY" : -9998100,
+        "xyUnits" : 10000,
+        "falseZ" : -100000,
+        "zUnits" : 10000,
+        "falseM" : -100000,
+        "mUnits" : 10000
+      }
+    },
+    "generalPlacementProperties" : {
+      "type" : "CIMMaplexGeneralPlacementProperties",
+      "invertedLabelTolerance" : 2,
+      "unplacedLabelColor" : {
+        "type" : "CIMRGBColor",
+        "values" : [
+          255,
+          0,
+          0,
+          100
+        ]
+      },
+      "keyNumberGroups" : [
+        {
+          "type" : "CIMMaplexKeyNumberGroup",
+          "delimiterCharacter" : ".",
+          "horizontalAlignment" : "Left",
+          "maximumNumberOfLines" : 20,
+          "minimumNumberOfLines" : 2,
+          "name" : "Default",
+          "numberResetType" : "None",
+          "keyNumberMethod" : "PreventUnplacedLabels"
+        }
+      ],
+      "placementQuality" : "High"
+    },
+    "snappingProperties" : {
+      "type" : "CIMSnappingProperties",
+      "xYTolerance" : 10,
+      "xYToleranceUnit" : "SnapXYToleranceUnitPixel",
+      "snapToSketchEnabled" : true,
+      "snapRequestType" : "SnapRequestType_GeometricAndVisualSnapping",
+      "isZSnappingEnabled" : true,
+      "snapTipDisplayParts" : 3
+    },
+    "spatialReference" : {
+      "wkt" : "PROJCS[\"NAD83_CSRS_2010_Nova_Scotia_UTM_Zone_20\",GEOGCS[\"GCS_CSRS_2010\",DATUM[\"D_CSRS_2010\",SPHEROID[\"Geodetic_Reference_System_of_1980\",6378137.0,298.257222100892]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",500000.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",-63.0],PARAMETER[\"Scale_Factor\",0.9996],PARAMETER[\"Latitude_Of_Origin\",0.0],UNIT[\"Meter\",1.0]]",
+      "xyTolerance" : 0.001,
+      "zTolerance" : 0.001,
+      "mTolerance" : 0.001,
+      "falseX" : -5120900,
+      "falseY" : -9998100,
+      "xyUnits" : 10000,
+      "falseZ" : -100000,
+      "zUnits" : 10000,
+      "falseM" : -100000,
+      "mUnits" : 10000
+    },
+    "timeDisplay" : {
+      "type" : "CIMMapTimeDisplay",
+      "defaultTimeIntervalUnits" : "esriTimeUnitsUnknown",
+      "timeValue" : {
+        "type" : "TimeExtent",
+        "start" : null,
+        "end" : null,
+        "empty" : false
+      },
+      "timeRelation" : "esriTimeRelationOverlaps"
+    },
+    "colorModel" : "RGB",
+    "scaleDisplayFormat" : "Value",
+    "clippingMode" : "None",
+    "nearPlaneClipDistanceMode" : "Automatic",
+    "rGBColorProfile" : "sRGB IEC61966-2.1",
+    "cMYKColorProfile" : "U.S. Web Coated (SWOP) v2",
+    "autoFillFeatureCache" : true,
+    "useMasking" : true
+  },
+  "layerDefinitions" : [
+    {
+      "type" : "CIMFeatureLayer",
+      "name" : "EnrieSala_200_strat_rand_pts",
+      "uRI" : "CIMPATH=map/csrs_oxford2_accuracypoints.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant",
+        "start" : -62135596800000
+      },
+      "metadataURI" : "CIMPATH=Metadata/1d94a3c6b5e8d202b1318ff955fb31fe.xml",
+      "useSourceMetadata" : true,
+      "description" : "csrs_oxford2_accuracypoints",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "elevationSurfaceLayerURI" : "CIMPATH=Map/620655093e8b4635a03fe49769195492.json"
+      },
+      "layerType" : "Operational",
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "autoGenerateFeatureTemplates" : true,
+      "featureElevationExpression" : "0",
+      "featureTable" : {
+        "type" : "CIMFeatureTable",
+        "displayField" : "Classified",
+        "editable" : true,
+        "dataConnection" : {
+          "type" : "CIMStandardDataConnection",
+          "workspaceConnectionString" : "DATABASE=.",
+          "workspaceFactory" : "Shapefile",
+          "dataset" : "csrs_oxford2_accuracypoints",
+          "datasetType" : "esriDTFeatureClass"
+        },
+        "studyAreaSpatialRel" : "esriSpatialRelUndefined",
+        "searchOrder" : "esriSearchOrderSpatial"
+      },
+      "htmlPopupEnabled" : true,
+      "selectable" : true,
+      "featureCacheType" : "Session",
+      "displayFiltersType" : "ByScale",
+      "featureBlendingMode" : "Alpha",
+      "layerEffectsMode" : "Layer",
+      "labelClasses" : [
+        {
+          "type" : "CIMLabelClass",
+          "expressionTitle" : "Custom",
+          "expression" : "$feature['Classified']",
+          "expressionEngine" : "Arcade",
+          "featuresToLabel" : "AllVisibleFeatures",
+          "maplexLabelPlacementProperties" : {
+            "type" : "CIMMaplexLabelPlacementProperties",
+            "featureType" : "Point",
+            "avoidPolygonHoles" : true,
+            "canOverrunFeature" : true,
+            "canPlaceLabelOutsidePolygon" : true,
+            "canRemoveOverlappingLabel" : true,
+            "canStackLabel" : true,
+            "centerLabelAnchorType" : "Symbol",
+            "connectionType" : "Unambiguous",
+            "constrainOffset" : "NoConstraint",
+            "contourAlignmentType" : "Page",
+            "contourLadderType" : "Straight",
+            "contourMaximumAngle" : 90,
+            "enableConnection" : true,
+            "enablePointPlacementPriorities" : true,
+            "featureWeight" : 0,
+            "fontHeightReductionLimit" : 4,
+            "fontHeightReductionStep" : 0.5,
+            "fontWidthReductionLimit" : 90,
+            "fontWidthReductionStep" : 5,
+            "graticuleAlignmentType" : "Straight",
+            "keyNumberGroupName" : "Default",
+            "labelBuffer" : 15,
+            "labelLargestPolygon" : true,
+            "labelPriority" : -1,
+            "labelStackingProperties" : {
+              "type" : "CIMMaplexLabelStackingProperties",
+              "stackAlignment" : "ChooseBest",
+              "maximumNumberOfLines" : 3,
+              "minimumNumberOfCharsPerLine" : 3,
+              "maximumNumberOfCharsPerLine" : 24,
+              "separators" : [
+                {
+                  "type" : "CIMMaplexStackingSeparator",
+                  "separator" : " ",
+                  "splitAfter" : true
+                },
+                {
+                  "type" : "CIMMaplexStackingSeparator",
+                  "separator" : ",",
+                  "visible" : true,
+                  "splitAfter" : true
+                }
+              ],
+              "trimStackingSeparators" : true
+            },
+            "lineFeatureType" : "General",
+            "linePlacementMethod" : "OffsetCurvedFromLine",
+            "maximumLabelOverrun" : 36,
+            "maximumLabelOverrunUnit" : "Point",
+            "minimumFeatureSizeUnit" : "Map",
+            "multiPartOption" : "OneLabelPerPart",
+            "offsetAlongLineProperties" : {
+              "type" : "CIMMaplexOffsetAlongLineProperties",
+              "placementMethod" : "BestPositionAlongLine",
+              "labelAnchorPoint" : "CenterOfLabel",
+              "distanceUnit" : "Percentage",
+              "useLineDirection" : true
+            },
+            "pointExternalZonePriorities" : {
+              "type" : "CIMMaplexExternalZonePriorities",
+              "aboveLeft" : 4,
+              "aboveCenter" : 2,
+              "aboveRight" : 1,
+              "centerRight" : 3,
+              "belowRight" : 5,
+              "belowCenter" : 7,
+              "belowLeft" : 8,
+              "centerLeft" : 6
+            },
+            "pointPlacementMethod" : "AroundPoint",
+            "polygonAnchorPointType" : "GeometricCenter",
+            "polygonBoundaryWeight" : 0,
+            "polygonExternalZones" : {
+              "type" : "CIMMaplexExternalZonePriorities",
+              "aboveLeft" : 4,
+              "aboveCenter" : 2,
+              "aboveRight" : 1,
+              "centerRight" : 3,
+              "belowRight" : 5,
+              "belowCenter" : 7,
+              "belowLeft" : 8,
+              "centerLeft" : 6
+            },
+            "polygonFeatureType" : "General",
+            "polygonInternalZones" : {
+              "type" : "CIMMaplexInternalZonePriorities",
+              "center" : 1
+            },
+            "polygonPlacementMethod" : "CurvedInPolygon",
+            "primaryOffset" : 1,
+            "primaryOffsetUnit" : "Point",
+            "removeAmbiguousLabels" : "All",
+            "removeExtraWhiteSpace" : true,
+            "repetitionIntervalUnit" : "Point",
+            "rotationProperties" : {
+              "type" : "CIMMaplexRotationProperties",
+              "rotationType" : "Arithmetic",
+              "alignmentType" : "Straight"
+            },
+            "secondaryOffset" : 100,
+            "secondaryOffsetUnit" : "Percentage",
+            "strategyPriorities" : {
+              "type" : "CIMMaplexStrategyPriorities",
+              "stacking" : 1,
+              "overrun" : 2,
+              "fontCompression" : 3,
+              "fontReduction" : 4,
+              "abbreviation" : 5
+            },
+            "thinningDistanceUnit" : "Point",
+            "truncationMarkerCharacter" : ".",
+            "truncationMinimumLength" : 1,
+            "truncationPreferredCharacters" : "aeiou",
+            "truncationExcludedCharacters" : "0123456789",
+            "polygonAnchorPointPerimeterInsetUnit" : "Point"
+          },
+          "name" : "Class 1",
+          "priority" : -1,
+          "standardLabelPlacementProperties" : {
+            "type" : "CIMStandardLabelPlacementProperties",
+            "featureType" : "Line",
+            "featureWeight" : "None",
+            "labelWeight" : "High",
+            "numLabelsOption" : "OneLabelPerName",
+            "lineLabelPosition" : {
+              "type" : "CIMStandardLineLabelPosition",
+              "above" : true,
+              "inLine" : true,
+              "parallel" : true
+            },
+            "lineLabelPriorities" : {
+              "type" : "CIMStandardLineLabelPriorities",
+              "aboveStart" : 3,
+              "aboveAlong" : 3,
+              "aboveEnd" : 3,
+              "centerStart" : 3,
+              "centerAlong" : 3,
+              "centerEnd" : 3,
+              "belowStart" : 3,
+              "belowAlong" : 3,
+              "belowEnd" : 3
+            },
+            "pointPlacementMethod" : "AroundPoint",
+            "pointPlacementPriorities" : {
+              "type" : "CIMStandardPointPlacementPriorities",
+              "aboveLeft" : 2,
+              "aboveCenter" : 2,
+              "aboveRight" : 1,
+              "centerLeft" : 3,
+              "centerRight" : 2,
+              "belowLeft" : 3,
+              "belowCenter" : 3,
+              "belowRight" : 2
+            },
+            "rotationType" : "Arithmetic",
+            "polygonPlacementMethod" : "AlwaysHorizontal"
+          },
+          "textSymbol" : {
+            "type" : "CIMSymbolReference",
+            "symbol" : {
+              "type" : "CIMTextSymbol",
+              "blockProgression" : "TTB",
+              "depth3D" : 1,
+              "extrapolateBaselines" : true,
+              "fontEffects" : "Normal",
+              "fontEncoding" : "Unicode",
+              "fontFamilyName" : "Tahoma",
+              "fontStyleName" : "Regular",
+              "fontType" : "Unspecified",
+              "haloSize" : 1,
+              "height" : 10,
+              "hinting" : "Default",
+              "horizontalAlignment" : "Left",
+              "kerning" : true,
+              "letterWidth" : 100,
+              "ligatures" : true,
+              "lineGapType" : "ExtraLeading",
+              "symbol" : {
+                "type" : "CIMPolygonSymbol",
+                "symbolLayers" : [
+                  {
+                    "type" : "CIMSolidFill",
+                    "enable" : true,
+                    "color" : {
+                      "type" : "CIMRGBColor",
+                      "values" : [
+                        0,
+                        0,
+                        0,
+                        100
+                      ]
+                    }
+                  }
+                ],
+                "angleAlignment" : "Map"
+              },
+              "textCase" : "Normal",
+              "textDirection" : "LTR",
+              "verticalAlignment" : "Bottom",
+              "verticalGlyphOrientation" : "Right",
+              "wordSpacing" : 100,
+              "billboardMode3D" : "FaceNearPlane"
+            }
+          },
+          "useCodedValue" : true,
+          "visibility" : true,
+          "iD" : -1
+        }
+      ],
+      "renderer" : {
+        "type" : "CIMSimpleRenderer",
+        "sampleSize" : 10000,
+        "patch" : "Default",
+        "symbol" : {
+          "type" : "CIMSymbolReference",
+          "symbol" : {
+            "type" : "CIMPointSymbol",
+            "symbolLayers" : [
+              {
+                "type" : "CIMVectorMarker",
+                "enable" : true,
+                "anchorPointUnits" : "Relative",
+                "dominantSizeAxis3D" : "Z",
+                "size" : 4,
+                "billboardMode3D" : "FaceNearPlane",
+                "frame" : {
+                  "xmin" : -2,
+                  "ymin" : -2,
+                  "xmax" : 2,
+                  "ymax" : 2
+                },
+                "markerGraphics" : [
+                  {
+                    "type" : "CIMMarkerGraphic",
+                    "geometry" : {
+                      "curveRings" : [
+                        [
+                          [
+                            1.2246467991473532e-16,
+                            2
+                          ],
+                          {
+                            "a" : [
+                              [
+                                1.2246467991473532e-16,
+                                2
+                              ],
+                              [
+                                1.2246467991473532e-16,
+                                0
+                              ],
+                              0,
+                              1
+                            ]
+                          }
+                        ]
+                      ]
+                    },
+                    "symbol" : {
+                      "type" : "CIMPolygonSymbol",
+                      "symbolLayers" : [
+                        {
+                          "type" : "CIMSolidStroke",
+                          "enable" : true,
+                          "capStyle" : "Round",
+                          "joinStyle" : "Round",
+                          "lineStyle3D" : "Strip",
+                          "miterLimit" : 10,
+                          "width" : 0.69999999999999996,
+                          "height3D" : 1,
+                          "anchor3D" : "Center",
+                          "color" : {
+                            "type" : "CIMRGBColor",
+                            "values" : [
+                              0,
+                              0,
+                              0,
+                              100
+                            ]
+                          }
+                        },
+                        {
+                          "type" : "CIMSolidFill",
+                          "enable" : true,
+                          "color" : {
+                            "type" : "CIMRGBColor",
+                            "values" : [
+                              157.88999999999999,
+                              40.469999999999999,
+                              175.94999999999999,
+                              100
+                            ]
+                          }
+                        }
+                      ],
+                      "angleAlignment" : "Map"
+                    }
+                  }
+                ],
+                "scaleSymbolsProportionally" : true,
+                "respectFrame" : true
+              }
+            ],
+            "haloSize" : 1,
+            "scaleX" : 1,
+            "angleAlignment" : "Display"
+          }
+        }
+      },
+      "scaleSymbols" : true,
+      "snappable" : true
+    },
+    {
+      "type" : "CIMRasterLayer",
+      "name" : "EnrieSala_S2_RGBN_OBIA",
+      "uRI" : "CIMPATH=map/reclassified_202412072033485501555.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant",
+        "start" : -62135596800000
+      },
+      "metadataURI" : "CIMPATH=Metadata/01a124e4748b1d0a8125146eb0393630.xml",
+      "useSourceMetadata" : true,
+      "description" : "Reclassified_202412072033485501555",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "elevationSurfaceLayerURI" : "CIMPATH=Map/620655093e8b4635a03fe49769195492.json"
+      },
+      "layerType" : "Operational",
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "dataConnection" : {
+        "type" : "CIMStandardDataConnection",
+        "workspaceConnectionString" : "DATABASE=.\\P2_OBIA_Base_Project\\P2_OBIA_Base_Project\\P2_OBIA_Base_Project.gdb",
+        "workspaceFactory" : "FileGDB",
+        "dataset" : "Reclassified_202412072033485501555",
+        "datasetType" : "esriDTRasterDataset"
+      },
+      "colorizer" : {
+        "type" : "CIMRasterUniqueValueColorizer",
+        "resamplingType" : "NearestNeighbor",
+        "noDataColor" : {
+          "type" : "CIMRGBColor",
+          "values" : [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "fieldName" : "Class_name",
+        "groups" : [
+          {
+            "type" : "CIMRasterUniqueValueGroup",
+            "classes" : [
+              {
+                "type" : "CIMRasterUniqueValueClass",
+                "values" : [
+                  "Temperate coniferous forest"
+                ],
+                "label" : "Temperate coniferous forest",
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    0,
+                    61,
+                    0,
+                    100
+                  ]
+                }
+              },
+              {
+                "type" : "CIMRasterUniqueValueClass",
+                "values" : [
+                  "Broadleaf deciduous forest"
+                ],
+                "label" : "Broadleaf deciduous forest",
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    20,
+                    140,
+                    61,
+                    100
+                  ]
+                }
+              },
+              {
+                "type" : "CIMRasterUniqueValueClass",
+                "values" : [
+                  "Mixed forest"
+                ],
+                "label" : "Mixed forest",
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    92,
+                    117,
+                    43,
+                    100
+                  ]
+                }
+              },
+              {
+                "type" : "CIMRasterUniqueValueClass",
+                "values" : [
+                  "Wetland"
+                ],
+                "label" : "Wetland",
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    107,
+                    163,
+                    138,
+                    100
+                  ]
+                }
+              },
+              {
+                "type" : "CIMRasterUniqueValueClass",
+                "values" : [
+                  "Cropland"
+                ],
+                "label" : "Cropland",
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    230,
+                    173,
+                    102,
+                    100
+                  ]
+                }
+              },
+              {
+                "type" : "CIMRasterUniqueValueClass",
+                "values" : [
+                  "Barren Lands"
+                ],
+                "label" : "Barren Lands",
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    168,
+                    171,
+                    174,
+                    100
+                  ]
+                }
+              },
+              {
+                "type" : "CIMRasterUniqueValueClass",
+                "values" : [
+                  "Urban"
+                ],
+                "label" : "Urban",
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    220,
+                    33,
+                    38,
+                    100
+                  ]
+                }
+              },
+              {
+                "type" : "CIMRasterUniqueValueClass",
+                "values" : [
+                  "Water"
+                ],
+                "label" : "Water",
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    76,
+                    112,
+                    163,
+                    100
+                  ]
+                }
+              }
+            ],
+            "heading" : "Class_name"
+          }
+        ],
+        "colorRamp" : {
+          "type" : "CIMMultipartColorRamp",
+          "colorRamps" : [
+            {
+              "type" : "CIMLinearContinuousColorRamp",
+              "fromColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  0,
+                  61,
+                  0,
+                  100
+                ]
+              },
+              "toColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  20,
+                  140,
+                  61,
+                  100
+                ]
+              }
+            },
+            {
+              "type" : "CIMLinearContinuousColorRamp",
+              "fromColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  20,
+                  140,
+                  61,
+                  100
+                ]
+              },
+              "toColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  92,
+                  117,
+                  43,
+                  100
+                ]
+              }
+            },
+            {
+              "type" : "CIMLinearContinuousColorRamp",
+              "fromColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  92,
+                  117,
+                  43,
+                  100
+                ]
+              },
+              "toColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  107,
+                  163,
+                  138,
+                  100
+                ]
+              }
+            },
+            {
+              "type" : "CIMLinearContinuousColorRamp",
+              "fromColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  107,
+                  163,
+                  138,
+                  100
+                ]
+              },
+              "toColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  230,
+                  173,
+                  102,
+                  100
+                ]
+              }
+            },
+            {
+              "type" : "CIMLinearContinuousColorRamp",
+              "fromColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  230,
+                  173,
+                  102,
+                  100
+                ]
+              },
+              "toColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  168,
+                  171,
+                  174,
+                  100
+                ]
+              }
+            },
+            {
+              "type" : "CIMLinearContinuousColorRamp",
+              "fromColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  168,
+                  171,
+                  174,
+                  100
+                ]
+              },
+              "toColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  220,
+                  33,
+                  38,
+                  100
+                ]
+              }
+            },
+            {
+              "type" : "CIMLinearContinuousColorRamp",
+              "fromColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  220,
+                  33,
+                  38,
+                  100
+                ]
+              },
+              "toColor" : {
+                "type" : "CIMRGBColor",
+                "values" : [
+                  76,
+                  112,
+                  163,
+                  100
+                ]
+              }
+            }
+          ],
+          "weights" : [
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285,
+            0.14285714285714285
+          ]
+        }
+      },
+      "attributeTable" : {
+        "type" : "CIMRasterTable",
+        "displayField" : "Class_name",
+        "editable" : true
+      }
+    },
+    {
+      "type" : "CIMRasterLayer",
+      "name" : "EnrieSala_S2_RGBN_Segmentation",
+      "uRI" : "CIMPATH=map/segmented_202412072031533004055.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant",
+        "start" : -62135596800000
+      },
+      "metadataURI" : "CIMPATH=Metadata/6edf02a7b5f6409887aa889d87246edc.xml",
+      "useSourceMetadata" : true,
+      "description" : "Segmented_202412072031533004055",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "elevationSurfaceLayerURI" : "CIMPATH=Map/620655093e8b4635a03fe49769195492.json"
+      },
+      "layerType" : "Operational",
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "dataConnection" : {
+        "type" : "CIMStandardDataConnection",
+        "workspaceConnectionString" : "DATABASE=.\\P2_OBIA_Base_Project\\P2_OBIA_Base_Project\\P2_OBIA_Base_Project.gdb",
+        "workspaceFactory" : "FileGDB",
+        "dataset" : "Segmented_202412072031533004055",
+        "datasetType" : "esriDTRasterDataset"
+      },
+      "colorizer" : {
+        "type" : "CIMRasterRGBColorizer",
+        "resamplingType" : "NearestNeighbor",
+        "noDataColor" : {
+          "type" : "CIMRGBColor",
+          "values" : [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "alphaBandIndex" : -1,
+        "backgroundColor" : {
+          "type" : "CIMRGBColor",
+          "values" : [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "blueBandIndex" : 2,
+        "gammaB" : 1,
+        "gammaG" : 1,
+        "gammaR" : 1,
+        "greenBandIndex" : 1,
+        "maxPercent" : 2,
+        "minPercent" : 2,
+        "standardDeviationsParam" : 2,
+        "stretchStatsBlue" : {
+          "type" : "StatsHistogram",
+          "min" : 2,
+          "max" : 247,
+          "mean" : 99.831831460581554,
+          "stddev" : 26.158924060378055,
+          "limitMin" : -0.5,
+          "limitMax" : 255.5,
+          "histogram" : [
+            0,
+            0,
+            0.0011006490757619692,
+            0.00021428566076781699,
+            0.0006933065201532167,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4.1708281291638041e-05,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7.1928053964022493e-05,
+            5.6443542346767642e-05,
+            7.9670309772649902e-05,
+            0,
+            7.8921059210524679e-05,
+            0,
+            0.00014560435923967053,
+            5.4695291035142096e-05,
+            0,
+            0.00010889108169553404,
+            8.816181614340256e-05,
+            0,
+            0,
+            0.00011638358731678638,
+            0,
+            8.6913065206527175e-05,
+            0.00010639357982178326,
+            4.2957032228513433e-05,
+            0,
+            4.2957032228513433e-05,
+            0.0001481018611134213,
+            7.3426555088272952e-05,
+            0.00016233762179380075,
+            0.00016158837123167553,
+            0.0004240758181628826,
+            0.00054020965529229389,
+            0.00021128865851931605,
+            0.00030444547841022016,
+            0.00024225768175382574,
+            0.0010324672746085729,
+            0.00018306688734593223,
+            0.00067807175872333701,
+            0.00032792199602347751,
+            0.0003461537597018582,
+            0.00058041943545968143,
+            0.0010676820510284587,
+            0.0010946550712649672,
+            0.00047352635526314805,
+            0.00094505470902729539,
+            0.0014085910567954404,
+            0.0022050444043345643,
+            0.0023236757433377263,
+            0.002092407069828404,
+            0.011338408756641169,
+            0.0039762727331986185,
+            0.0083783695358717446,
+            0.040558930929337933,
+            0.022239504935188576,
+            0.025773969586920683,
+            0.076417063831902138,
+            0.05170278429001391,
+            0.098954770490816565,
+            0.14316454965920339,
+            0.02429744647915922,
+            0.042363875533497616,
+            0.066632850491296081,
+            0.018569925432086555,
+            0.011020476768112695,
+            0.02279295135041175,
+            0.0076176304651272564,
+            0.0082674804526772089,
+            0.012509737135430287,
+            0.01266882800478821,
+            0.0045636851739048016,
+            0.0041675813767279276,
+            0.0042070419063331898,
+            0.0062235249191995709,
+            0.0042015474022109381,
+            0.0077799680869210571,
+            0.0027979513491629996,
+            0.0034552938423342053,
+            0.0023978515489881248,
+            0.0035606884214064881,
+            0.0050621865479054578,
+            0.0046301187237465721,
+            0.0037292697978846658,
+            0.0035489501625998593,
+            0.0077347633030061683,
+            0.0022889604672925905,
+            0.0045034953787474082,
+            0.0032832159632327764,
+            0.0034435555835275766,
+            0.0025249743943620393,
+            0.0027490003124374844,
+            0.0034587903449574565,
+            0.005657840744795019,
+            0.0056563422436707684,
+            0.0038036953537224391,
+            0.0049677809770776781,
+            0.0047697290784892415,
+            0.0058231753688373208,
+            0.0059038446793594707,
+            0.0059133351864797236,
+            0.0064565418440205181,
+            0.0052000486513365009,
+            0.0058291693733343222,
+            0.0059080904325448467,
+            0.0032647344493670206,
+            0.0065644339249665519,
+            0.0040929060707027799,
+            0.0038024466027855638,
+            0.0067804678370459951,
+            0.0038176813642154437,
+            0.0044373115790930125,
+            0.0036103887086941285,
+            0.0021503491132994221,
+            0.0041870618913431839,
+            0.0033901090434293097,
+            0.0040589400452197685,
+            0.0021473521110509214,
+            0.0023314179991463539,
+            0.0016843152636575266,
+            0.0014335660755329482,
+            0.0014852643643195893,
+            0.0033074417314081588,
+            0.0020774220585858994,
+            0.0023134359856553481,
+            0.0010526970397859541,
+            0.0022752242069869612,
+            0.00085439539101014211,
+            0.0006840657632203389,
+            0.0020934060705779045,
+            0.00092032944047716267,
+            0.0027052940296468458,
+            0.00071128853364422237,
+            0.0012147849113923798,
+            0.00090384592811040756,
+            0.00069080901827946596,
+            0.00064135848117920051,
+            0.00072227754188872585,
+            0.00079770209847599934,
+            0.001007492255871065,
+            0.0012914582189165287,
+            0.00056693292534142721,
+            0.00028546446416971425,
+            0.00082817162133575894,
+            0.00060439545344768899,
+            0.00078421558835774512,
+            0.00087962015993502498,
+            0.0013289207470227906,
+            0.00053021964779729081,
+            0.00026873120161558401,
+            0.00086313664756826987,
+            0.00075099881343685976,
+            0.000361388521131738,
+            0.00047127860357677233,
+            0.00028296696229596345,
+            0.00045304683989839164,
+            0.00071503478645484854,
+            0.00046528459907977044,
+            0.00045704284289639288,
+            0.00077147832880161617,
+            0.00080219760184875079,
+            0.00057217767927630393,
+            0.00074850131156310902,
+            0.00021828166376581824,
+            0.00019530464652731106,
+            0.00024775218587607745,
+            0.00073376605050797937,
+            0.00011288708469353528,
+            0.00018281713715855716,
+            0.00036913077694036541,
+            0.00052647339498666454,
+            0.00050349637774815739,
+            0.00037662328256161774,
+            0.00031118873346934727,
+            0.00041508481141737976,
+            8.7412565581277324e-05,
+            0.00027072920311458466,
+            0.0001468531101765459,
+            0.0001743256307878045,
+            0.00020879115664556528,
+            0.00084240738201613833,
+            5.7692293283643034e-05,
+            0.0002382616787558245,
+            0,
+            0.00074650331006410843,
+            0.00047727260807377422,
+            0.00013936060455529357,
+            0.00031868123909059961,
+            0.00055294691484842283,
+            0.00021403591058044192,
+            0.00022702292032394597,
+            0.00038586403949449565,
+            0.00016858137647817771,
+            0.00010739258057128357,
+            0.00029045946791721579,
+            0.00049025961781727829,
+            0.00034515475895235791,
+            0.00039360629530312306,
+            0.00025649344243420521,
+            0,
+            5.219778916139132e-05,
+            8.7662315768652412e-05,
+            0.0010284712716105715,
+            0.00011838158881578701,
+            0,
+            7.6923057711524045e-05,
+            0,
+            0.00018956039221768427,
+            0,
+            0.00019805189858843693,
+            9.440557082777951e-05,
+            0.00036638352487923954,
+            0,
+            0,
+            8.0669310522150226e-05,
+            0,
+            0.00042032956535225643,
+            0.00063361622537057305,
+            0.00036763227581611491,
+            5.3946040473016867e-05,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "nsamples" : 4004001,
+          "resolution" : 1.003921568627451
+        },
+        "stretchStatsGreen" : {
+          "type" : "StatsHistogram",
+          "min" : 1,
+          "max" : 250,
+          "mean" : 141.78716663657178,
+          "stddev" : 24.156152770740707,
+          "limitMin" : -0.5,
+          "limitMax" : 255.5,
+          "histogram" : [
+            0,
+            0.001618630964377881,
+            0.00038961029230512182,
+            4.1708281291638041e-05,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7.1928053964022493e-05,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5.6443542346767642e-05,
+            0,
+            0,
+            7.9670309772649902e-05,
+            0,
+            0.00013361635024566678,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.00014560435923967053,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.00011638358731678638,
+            0,
+            0,
+            0,
+            6.0189795157393816e-05,
+            0.0001356143517446674,
+            0,
+            0,
+            0,
+            0.00012512484387491412,
+            0,
+            8.3416562583276082e-05,
+            0.00015909086935792473,
+            4.2957032228513433e-05,
+            0.00015834161879579951,
+            0,
+            0,
+            0.00031893098927797468,
+            0,
+            0.00018531463903230793,
+            0.00020429565327281386,
+            0,
+            0.00023076917313457213,
+            7.2927054713522804e-05,
+            6.468529853014522e-05,
+            5.2447539348766394e-05,
+            0,
+            0,
+            0.00055519466653479856,
+            0.00010889108169553404,
+            0,
+            0,
+            6.3936047968019983e-05,
+            0,
+            0,
+            0,
+            0.00014210785661641941,
+            0,
+            7.0179802652396933e-05,
+            0.00020604390458443941,
+            0,
+            0,
+            0.00012712284537391474,
+            0,
+            0.00018931064203030919,
+            0,
+            8.09190607095253e-05,
+            0,
+            5.9940044970018742e-05,
+            0,
+            4.1708281291638041e-05,
+            0,
+            4.0959030729512805e-05,
+            0,
+            0.00010914083188290912,
+            0,
+            0.00016233762179380075,
+            0.00011413583563041068,
+            0.00058966019239255934,
+            0.00027622370723683634,
+            4.3706282790638662e-05,
+            0.00068856126659309024,
+            0.00037687303274899282,
+            0.00039810179867587445,
+            9.0159817642403181e-05,
+            0.00070504477895984546,
+            0.00078721259060624612,
+            0.00061513471150481734,
+            0.00034465525857760776,
+            0.00021478516114256714,
+            0.0010254742693620706,
+            0.00040259730204862584,
+            0.00041233755935625389,
+            0.0011408588559293567,
+            0.0013738757807503046,
+            0.0011296200974974782,
+            0.0022157836623916925,
+            0.0017622373221185508,
+            0.0024268225707236336,
+            0.0023953540471143737,
+            0.0014805191107594628,
+            0.0029188304398525375,
+            0.0079268211970976027,
+            0.004571677179900804,
+            0.0083913565456152483,
+            0.004538210654792544,
+            0.007265732451115771,
+            0.012096650325511906,
+            0.021371373283872806,
+            0.014385860542991872,
+            0.013401095554171939,
+            0.01615584012091905,
+            0.0081036443297591576,
+            0.017271224457736149,
+            0.0069090891835441601,
+            0.1485276851828958,
+            0.084022456537848011,
+            0.049430057584900704,
+            0.040563176682523308,
+            0.0042589899453072061,
+            0.076463267616566535,
+            0.021009485262366318,
+            0.078146833629661933,
+            0.0089682794784516785,
+            0.0073381600054545438,
+            0.020555689171905801,
+            0.011111136086129849,
+            0.001974275231199992,
+            0.010536460904979793,
+            0.0059920064955028733,
+            0.0067447535602513584,
+            0.0041595893707319252,
+            0.0032395096804421378,
+            0.0064840143646317768,
+            0.0037440050589397957,
+            0.0029265726956611651,
+            0.0028998494256120316,
+            0.0038311678743336978,
+            0.0032427564328780137,
+            0.0075357124036682308,
+            0.0024203290658518818,
+            0.0017152842868920362,
+            0.0024005988010492507,
+            0.002469779602952147,
+            0.004166082875603677,
+            0.0023424070073908574,
+            0.0029870122410059338,
+            0.0032085406572076279,
+            0.0075369611546051065,
+            0.0046938050215272172,
+            0.0047162825383909746,
+            0.0049700287287640539,
+            0.0037217772922634135,
+            0.0056388597305545131,
+            0.0056987997755245318,
+            0.0048861126658060272,
+            0.0038286703724599467,
+            0.0053943542971143111,
+            0.006292455970915092,
+            0.005588909693079497,
+            0.0073861120414305589,
+            0.0061703281292886788,
+            0.0063136847368419737,
+            0.0068618863981302703,
+            0.0067337645520068549,
+            0.0066476007373624533,
+            0.0047342645518819804,
+            0.0040222267676756325,
+            0.0076283697231843851,
+            0.0059435549591521078,
+            0.0056548437425465179,
+            0.0060009975022483758,
+            0.0024965028730012805,
+            0.0031306185987466039,
+            0.0030681810519028341,
+            0.0024128365602306295,
+            0.0030686805522775842,
+            0.0030979013242004687,
+            0.0016583412441705185,
+            0.0025244748939872892,
+            0.0018091903573450657,
+            0.0012777219586108995,
+            0.0018034461030354389,
+            0.001001498251374063,
+            0.0012200296653272565,
+            0.0005332166500457917,
+            0.0015521974145361103,
+            0.0013968527979888116,
+            0.0029138354361050358,
+            0.00079795184866337447,
+            0.00040059930054962524,
+            0.00071528453664222366,
+            0.00015209786411142254,
+            0.0022282711717604466,
+            0.00065409574073532946,
+            0.00047477510620002342,
+            0.00066108874598183164,
+            0.00027647345742421142,
+            0.00044130858109176299,
+            0.00056893092684042791,
+            0.0010142355109301921,
+            0.00038861129155562147,
+            0.00078321658760824482,
+            0.00011013983263240943,
+            0.00028146846117171301,
+            0.00077672308273649278,
+            0.00077322658011324175,
+            0.0002370129278189491,
+            0.0002005494004621877,
+            0.00012387609293803873,
+            0.00052897089686041539,
+            0.00058041943545968143,
+            0.00089535442173965492,
+            0.00051997989011491261,
+            0.00023351642519569801,
+            5.2447539348766394e-05,
+            7.8421558835774517e-05,
+            0.00033916075445535602,
+            0.0003623875218812383,
+            0.00013036959780979076,
+            0.00097702273301130543,
+            0,
+            0.00018081913565955654,
+            0.00017507488134992972,
+            0,
+            0.0003109389832819722,
+            0,
+            0.00036638352487923954,
+            0.00012937059706029044,
+            7.6923057711524045e-05,
+            0.00019805189858843693,
+            0,
+            5.3946040473016867e-05,
+            0,
+            0.00058641343995668332,
+            0.00089535442173965492,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "nsamples" : 4004001,
+          "resolution" : 1.003921568627451
+        },
+        "stretchStatsRed" : {
+          "type" : "StatsHistogram",
+          "min" : 1,
+          "max" : 252,
+          "mean" : 71.811863183850349,
+          "stddev" : 34.964331498785192,
+          "limitMin" : -0.5,
+          "limitMax" : 255.5,
+          "histogram" : [
+            0,
+            0.00090759218092103372,
+            0.0011006490757619692,
+            4.8701286538140227e-05,
+            0.00016208787160642567,
+            0.00021553441170469239,
+            0.00022227766676381948,
+            0,
+            0,
+            5.4695291035142096e-05,
+            9.5904071952029982e-05,
+            0.00011938058956528732,
+            0,
+            0.00020429565327281386,
+            0,
+            0,
+            7.8921059210524679e-05,
+            0.00015359636523567302,
+            7.8421558835774517e-05,
+            0,
+            0,
+            8.4665313520151467e-05,
+            5.1948038974016239e-05,
+            0.00036413577319286382,
+            0.00010214782663640693,
+            0.00011213783413141006,
+            0.0001845653884701827,
+            0.00024700293531395223,
+            8.916081689290287e-05,
+            0.00056218767178130074,
+            0.00065609374223433016,
+            0.00023751242819369925,
+            0.00065983999504495633,
+            0.00045729259308376795,
+            0.0015899096928297469,
+            0.00030419572822284509,
+            0.0011153843368170986,
+            0.0019752742319494926,
+            0.00091783193860341193,
+            0.0064483000878371409,
+            0.0022882112167304652,
+            0.0046675812518528342,
+            0.00593281570109498,
+            0.0067220262932002261,
+            0.0038761229080612118,
+            0.0053551435176964245,
+            0.0095047428809333472,
+            0.0043496492633243594,
+            0.013395351299862314,
+            0.088225252690995834,
+            0.034341400014635363,
+            0.011517479640989101,
+            0.05985787715837234,
+            0.10534213153293419,
+            0.019258486698679647,
+            0.10141281183496208,
+            0.068668314518402968,
+            0.018811683613465632,
+            0.0074263218215979464,
+            0.010612884462316568,
+            0.019392352799112687,
+            0.011444802336462953,
+            0.020090654323013407,
+            0.012355891020007238,
+            0.020779215589606496,
+            0.0046341147267445733,
+            0.007451796340710205,
+            0.0075574406699698629,
+            0.0060674310520901472,
+            0.0050424562831028266,
+            0.0053493992633867971,
+            0.0062822162132327138,
+            0.0026678315015405841,
+            0.003042207032415826,
+            0.0043321667502081041,
+            0.0060147337625540056,
+            0.0025704289284643037,
+            0.0045594394207194256,
+            0.0036905585188415288,
+            0.0028938554211150299,
+            0.0010864133150815896,
+            0.0013429067575157949,
+            0.0019178316888532245,
+            0.0032874617164181529,
+            0.002277971459048087,
+            0.0019805189858843691,
+            0.0022377616788806995,
+            0.001010988758494316,
+            0.0026975517738382182,
+            0.0048898589186166536,
+            0.0019590404697701126,
+            0.0014023473021110633,
+            0.0044772716090730243,
+            0.0036700790034767724,
+            0.0034325665752830731,
+            0.0031451041096143581,
+            0.002524225143799914,
+            0.0020257237697992583,
+            0.0029030961780479076,
+            0.0012579916938082682,
+            0.0020996498252622816,
+            0.0023036957283477204,
+            0.0024842651138199017,
+            0.003457791344207956,
+            0.0031605886212316132,
+            0.0036738252562873983,
+            0.0027642350738673644,
+            0.0030944048215772175,
+            0.003391357794366185,
+            0.0073491490136990472,
+            0.0034847643644444646,
+            0.0018254241195244456,
+            0.0044400588311541379,
+            0.004076172808148649,
+            0.0035966524483884996,
+            0.0044965023735009059,
+            0.0035084906322450969,
+            0.0033081909819702841,
+            0.0036848142645319018,
+            0.0048191796155895063,
+            0.0031535956159851109,
+            0.006445053335401265,
+            0.0020721773046510229,
+            0.0063521462656977359,
+            0.0028788704098725252,
+            0.0030849143144569646,
+            0.0042232756685125702,
+            0.0022689804523025841,
+            0.0036218772173133825,
+            0.0037155335375790364,
+            0.0023541452661974861,
+            0.0025349644018570427,
+            0.0036461029854887648,
+            0.0016613382464190194,
+            0.0043096892333443475,
+            0.0027242750438873516,
+            0.0022412581815039506,
+            0.001736762803006293,
+            0.0017337658007577921,
+            0.001861637896693832,
+            0.0014130865601681918,
+            0.0020457037847892647,
+            0.0019268226955987274,
+            0.0012917079691039039,
+            0.001423576068037945,
+            0.0039697792283268658,
+            0.0010504492880995784,
+            0.0013094402324075344,
+            0.0013144352361550359,
+            0.0013479017612632964,
+            0.00097402573076280454,
+            0.00080619360484675208,
+            0.0010998998251998439,
+            0.0015591904197826125,
+            0.0010492005371627029,
+            0.0011968028979013742,
+            0.00076298682243086354,
+            0.0011471026106137335,
+            0.00081693286290388043,
+            0.00065809174373333075,
+            0.0018918576693662164,
+            0.00037412578068786695,
+            0.0012470026855637649,
+            0.00020579415439706434,
+            0.00055569416690954871,
+            0.0017872123408560587,
+            0.00080969010747000312,
+            0.00034465525857760776,
+            0.00066433549841770766,
+            0.00062212771675131953,
+            0.00072902079694785291,
+            0.00072402579320035132,
+            0.0006248749688124454,
+            0.00041558431179212991,
+            0.00013261734949616646,
+            0.0004965033725016552,
+            0.00059715269801381167,
+            0.0014917578691913413,
+            0.00043881107921801219,
+            0.00022852142144819644,
+            0.00029445547091521703,
+            0.00026648344992920829,
+            0.0020714280540888976,
+            0.00064285698230345095,
+            0.0001868131401565584,
+            0.00071378603551797311,
+            0.00028721271548133977,
+            0.00010014982513740631,
+            0.00012512484387491412,
+            0.00040709280542137728,
+            0.0001743256307878045,
+            0.00010414582813540755,
+            0.00061188795906894132,
+            0.00034215775670385696,
+            0,
+            0.00016258737198117582,
+            0.00022702292032394597,
+            0.00098901074200530921,
+            0.00012512484387491412,
+            0.00071703278795384913,
+            7.8421558835774517e-05,
+            0.00077722258311124293,
+            0.00016383612291805122,
+            0.00058816169126830889,
+            5.6943042721517804e-05,
+            0.00062312671750081982,
+            0,
+            0.00024700293531395223,
+            0,
+            0.00049975012493753122,
+            0.00010514482888490788,
+            0.00019430564577781073,
+            0,
+            0.00043806182865588697,
+            0.00014785211092604623,
+            0,
+            0.00041983006497750623,
+            0.00055194791409892254,
+            0.00011363633525566052,
+            0,
+            0.00021878116414056838,
+            0,
+            0,
+            0.00011838158881578701,
+            0.0011655841244794893,
+            4.7202785413889755e-05,
+            0,
+            0.00017657338247418019,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4.8701286538140227e-05,
+            8.4915063707526541e-05,
+            0,
+            0,
+            0,
+            0,
+            8.4915063707526541e-05,
+            0,
+            0,
+            0.00056443542346767646,
+            5.3946040473016867e-05,
+            0,
+            7.6923057711524045e-05,
+            0.00042032956535225643,
+            0.0002507491881245784,
+            0.00011688308769153654,
+            0,
+            0.00058641343995668332,
+            0.00022602391957444567,
+            0.00010739258057128357,
+            0,
+            0,
+            0
+          ],
+          "nsamples" : 4004001,
+          "resolution" : 1.003921568627451
+        },
+        "stretchStatsType" : "Dataset",
+        "stretchType" : "Count",
+        "useBlueBand" : true,
+        "useDefaultMapping" : true,
+        "useGreenBand" : true,
+        "useRedBand" : true,
+        "customStretchMaxRed" : 1,
+        "customStretchMaxGreen" : 1,
+        "customStretchMaxBlue" : 1
+      }
+    },
+    {
+      "type" : "CIMRasterLayer",
+      "name" : "EnrieSala_CCRS_clip",
+      "uRI" : "CIMPATH=map/csrs_oxford2_tif.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant",
+        "start" : -62135596800000
+      },
+      "metadataURI" : "CIMPATH=Metadata/29f9dc62cc4f37d65a30df76873ecbe7.xml",
+      "useSourceMetadata" : true,
+      "description" : "csrs_oxford2.tif",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "elevationSurfaceLayerURI" : "CIMPATH=Map/620655093e8b4635a03fe49769195492.json"
+      },
+      "layerType" : "Operational",
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "dataConnection" : {
+        "type" : "CIMStandardDataConnection",
+        "workspaceConnectionString" : "DATABASE=.",
+        "workspaceFactory" : "Raster",
+        "dataset" : "csrs_oxford2.tif",
+        "datasetType" : "esriDTRasterDataset"
+      },
+      "colorizer" : {
+        "type" : "CIMRasterColorMapColorizer",
+        "resamplingType" : "NearestNeighbor",
+        "noDataColor" : {
+          "type" : "CIMRGBColor",
+          "values" : [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "colors" : [
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              60,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              147,
+              155,
+              111,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              98,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              29,
+              170,
+              4,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              19,
+              139,
+              4,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              91,
+              116,
+              42,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              106,
+              162,
+              137,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              178,
+              157,
+              50,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              231,
+              219,
+              93,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              224,
+              206,
+              137,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              155,
+              116,
+              83,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              185,
+              211,
+              142,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              63,
+              137,
+              111,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              106,
+              162,
+              137,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              240,
+              184,
+              108,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              167,
+              170,
+              173,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              219,
+              32,
+              37,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              75,
+              111,
+              162,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              254,
+              249,
+              254,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          },
+          {
+            "type" : "CIMRGBColor",
+            "values" : [
+              0,
+              0,
+              0,
+              100
+            ]
+          }
+        ],
+        "bandID" : -1,
+        "labels" : [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "56",
+          "57",
+          "58",
+          "59",
+          "60",
+          "61",
+          "62",
+          "63",
+          "64",
+          "65",
+          "66",
+          "67",
+          "68",
+          "69",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "76",
+          "77",
+          "78",
+          "79",
+          "80",
+          "81",
+          "82",
+          "83",
+          "84",
+          "85",
+          "86",
+          "87",
+          "88",
+          "89",
+          "90",
+          "91",
+          "92",
+          "93",
+          "94",
+          "95",
+          "96",
+          "97",
+          "98",
+          "99",
+          "100",
+          "101",
+          "102",
+          "103",
+          "104",
+          "105",
+          "106",
+          "107",
+          "108",
+          "109",
+          "110",
+          "111",
+          "112",
+          "113",
+          "114",
+          "115",
+          "116",
+          "117",
+          "118",
+          "119",
+          "120",
+          "121",
+          "122",
+          "123",
+          "124",
+          "125",
+          "126",
+          "127",
+          "128",
+          "129",
+          "130",
+          "131",
+          "132",
+          "133",
+          "134",
+          "135",
+          "136",
+          "137",
+          "138",
+          "139",
+          "140",
+          "141",
+          "142",
+          "143",
+          "144",
+          "145",
+          "146",
+          "147",
+          "148",
+          "149",
+          "150",
+          "151",
+          "152",
+          "153",
+          "154",
+          "155",
+          "156",
+          "157",
+          "158",
+          "159",
+          "160",
+          "161",
+          "162",
+          "163",
+          "164",
+          "165",
+          "166",
+          "167",
+          "168",
+          "169",
+          "170",
+          "171",
+          "172",
+          "173",
+          "174",
+          "175",
+          "176",
+          "177",
+          "178",
+          "179",
+          "180",
+          "181",
+          "182",
+          "183",
+          "184",
+          "185",
+          "186",
+          "187",
+          "188",
+          "189",
+          "190",
+          "191",
+          "192",
+          "193",
+          "194",
+          "195",
+          "196",
+          "197",
+          "198",
+          "199",
+          "200",
+          "201",
+          "202",
+          "203",
+          "204",
+          "205",
+          "206",
+          "207",
+          "208",
+          "209",
+          "210",
+          "211",
+          "212",
+          "213",
+          "214",
+          "215",
+          "216",
+          "217",
+          "218",
+          "219",
+          "220",
+          "221",
+          "222",
+          "223",
+          "224",
+          "225",
+          "226",
+          "227",
+          "228",
+          "229",
+          "230",
+          "231",
+          "232",
+          "233",
+          "234",
+          "235",
+          "236",
+          "237",
+          "238",
+          "239",
+          "240",
+          "241",
+          "242",
+          "243",
+          "244",
+          "245",
+          "246",
+          "247",
+          "248",
+          "249",
+          "250",
+          "251",
+          "252",
+          "253",
+          "254"
+        ],
+        "max" : 254,
+        "values" : [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179,
+          180,
+          181,
+          182,
+          183,
+          184,
+          185,
+          186,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          203,
+          204,
+          205,
+          206,
+          207,
+          208,
+          209,
+          210,
+          211,
+          212,
+          213,
+          214,
+          215,
+          216,
+          217,
+          218,
+          219,
+          220,
+          221,
+          222,
+          223,
+          224,
+          225,
+          226,
+          227,
+          228,
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254
+        ]
+      }
+    },
+    {
+      "type" : "CIMFeatureLayer",
+      "name" : "EnrieSala_AOI",
+      "uRI" : "CIMPATH=Map/4d76e998dc854e81a3e865901b0e7a01.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant",
+        "start" : -62135596800000
+      },
+      "metadataURI" : "CIMPATH=Metadata/99df522bc8ba49edc9f2af13cb2561a0.xml",
+      "useSourceMetadata" : true,
+      "description" : "BASE_NS_GeoNAM_NS_Tow_Buffer",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "elevationSurfaceLayerURI" : "CIMPATH=Map/620655093e8b4635a03fe49769195492.json"
+      },
+      "layerType" : "Operational",
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "autoGenerateFeatureTemplates" : true,
+      "featureElevationExpression" : "0",
+      "featureTable" : {
+        "type" : "CIMFeatureTable",
+        "displayField" : "GEONAME",
+        "editable" : true,
+        "dataConnection" : {
+          "type" : "CIMStandardDataConnection",
+          "workspaceConnectionString" : "DATABASE=.\\P2_OBIA_Base_Project\\P2_OBIA_Base_Project",
+          "workspaceFactory" : "Shapefile",
+          "dataset" : "Oxford",
+          "datasetType" : "esriDTFeatureClass"
+        },
+        "studyAreaSpatialRel" : "esriSpatialRelUndefined",
+        "searchOrder" : "esriSearchOrderSpatial"
+      },
+      "htmlPopupEnabled" : true,
+      "selectable" : true,
+      "featureCacheType" : "Session",
+      "displayFiltersType" : "ByScale",
+      "featureBlendingMode" : "Alpha",
+      "layerEffectsMode" : "Layer",
+      "labelClasses" : [
+        {
+          "type" : "CIMLabelClass",
+          "expressionTitle" : "Custom",
+          "expression" : "$feature.GEONAME",
+          "expressionEngine" : "Arcade",
+          "featuresToLabel" : "AllVisibleFeatures",
+          "maplexLabelPlacementProperties" : {
+            "type" : "CIMMaplexLabelPlacementProperties",
+            "featureType" : "Polygon",
+            "avoidPolygonHoles" : true,
+            "canOverrunFeature" : true,
+            "canPlaceLabelOutsidePolygon" : true,
+            "canRemoveOverlappingLabel" : true,
+            "canStackLabel" : true,
+            "centerLabelAnchorType" : "Symbol",
+            "connectionType" : "Unambiguous",
+            "constrainOffset" : "NoConstraint",
+            "contourAlignmentType" : "Page",
+            "contourLadderType" : "Straight",
+            "contourMaximumAngle" : 90,
+            "enableConnection" : true,
+            "featureWeight" : 0,
+            "fontHeightReductionLimit" : 4,
+            "fontHeightReductionStep" : 0.5,
+            "fontWidthReductionLimit" : 90,
+            "fontWidthReductionStep" : 5,
+            "graticuleAlignmentType" : "Straight",
+            "keyNumberGroupName" : "Default",
+            "labelBuffer" : 15,
+            "labelLargestPolygon" : false,
+            "labelPriority" : -1,
+            "labelStackingProperties" : {
+              "type" : "CIMMaplexLabelStackingProperties",
+              "stackAlignment" : "ChooseBest",
+              "maximumNumberOfLines" : 3,
+              "minimumNumberOfCharsPerLine" : 3,
+              "maximumNumberOfCharsPerLine" : 24,
+              "separators" : [
+                {
+                  "type" : "CIMMaplexStackingSeparator",
+                  "separator" : " ",
+                  "splitAfter" : true
+                },
+                {
+                  "type" : "CIMMaplexStackingSeparator",
+                  "separator" : ",",
+                  "visible" : true,
+                  "splitAfter" : true
+                }
+              ],
+              "trimStackingSeparators" : true
+            },
+            "lineFeatureType" : "General",
+            "linePlacementMethod" : "OffsetCurvedFromLine",
+            "maximumLabelOverrun" : 80,
+            "maximumLabelOverrunUnit" : "Point",
+            "minimumFeatureSizeUnit" : "Map",
+            "multiPartOption" : "OneLabelPerPart",
+            "offsetAlongLineProperties" : {
+              "type" : "CIMMaplexOffsetAlongLineProperties",
+              "placementMethod" : "BestPositionAlongLine",
+              "labelAnchorPoint" : "CenterOfLabel",
+              "distanceUnit" : "Percentage",
+              "useLineDirection" : true
+            },
+            "pointExternalZonePriorities" : {
+              "type" : "CIMMaplexExternalZonePriorities",
+              "aboveLeft" : 4,
+              "aboveCenter" : 2,
+              "aboveRight" : 1,
+              "centerRight" : 3,
+              "belowRight" : 5,
+              "belowCenter" : 7,
+              "belowLeft" : 8,
+              "centerLeft" : 6
+            },
+            "pointPlacementMethod" : "AroundPoint",
+            "polygonAnchorPointType" : "GeometricCenter",
+            "polygonBoundaryWeight" : 0,
+            "polygonExternalZones" : {
+              "type" : "CIMMaplexExternalZonePriorities",
+              "aboveLeft" : 4,
+              "aboveCenter" : 2,
+              "aboveRight" : 1,
+              "centerRight" : 3,
+              "belowRight" : 5,
+              "belowCenter" : 7,
+              "belowLeft" : 8,
+              "centerLeft" : 6
+            },
+            "polygonFeatureType" : "General",
+            "polygonInternalZones" : {
+              "type" : "CIMMaplexInternalZonePriorities",
+              "center" : 1
+            },
+            "polygonPlacementMethod" : "HorizontalInPolygon",
+            "primaryOffset" : 1,
+            "primaryOffsetUnit" : "Point",
+            "removeAmbiguousLabels" : "All",
+            "removeExtraWhiteSpace" : true,
+            "repetitionIntervalUnit" : "Map",
+            "rotationProperties" : {
+              "type" : "CIMMaplexRotationProperties",
+              "rotationType" : "Arithmetic",
+              "alignmentType" : "Straight"
+            },
+            "secondaryOffset" : 100,
+            "secondaryOffsetUnit" : "Percentage",
+            "strategyPriorities" : {
+              "type" : "CIMMaplexStrategyPriorities",
+              "stacking" : 1,
+              "overrun" : 2,
+              "fontCompression" : 3,
+              "fontReduction" : 4,
+              "abbreviation" : 5
+            },
+            "thinningDistanceUnit" : "Point",
+            "truncationMarkerCharacter" : ".",
+            "truncationMinimumLength" : 1,
+            "truncationPreferredCharacters" : "aeiou",
+            "polygonAnchorPointPerimeterInsetUnit" : "Point"
+          },
+          "name" : "Class 1",
+          "priority" : -1,
+          "standardLabelPlacementProperties" : {
+            "type" : "CIMStandardLabelPlacementProperties",
+            "featureType" : "Line",
+            "featureWeight" : "None",
+            "labelWeight" : "High",
+            "numLabelsOption" : "OneLabelPerName",
+            "lineLabelPosition" : {
+              "type" : "CIMStandardLineLabelPosition",
+              "above" : true,
+              "inLine" : true,
+              "parallel" : true
+            },
+            "lineLabelPriorities" : {
+              "type" : "CIMStandardLineLabelPriorities",
+              "aboveStart" : 3,
+              "aboveAlong" : 3,
+              "aboveEnd" : 3,
+              "centerStart" : 3,
+              "centerAlong" : 3,
+              "centerEnd" : 3,
+              "belowStart" : 3,
+              "belowAlong" : 3,
+              "belowEnd" : 3
+            },
+            "pointPlacementMethod" : "AroundPoint",
+            "pointPlacementPriorities" : {
+              "type" : "CIMStandardPointPlacementPriorities",
+              "aboveLeft" : 2,
+              "aboveCenter" : 2,
+              "aboveRight" : 1,
+              "centerLeft" : 3,
+              "centerRight" : 2,
+              "belowLeft" : 3,
+              "belowCenter" : 3,
+              "belowRight" : 2
+            },
+            "rotationType" : "Arithmetic",
+            "polygonPlacementMethod" : "AlwaysHorizontal"
+          },
+          "textSymbol" : {
+            "type" : "CIMSymbolReference",
+            "symbol" : {
+              "type" : "CIMTextSymbol",
+              "blockProgression" : "TTB",
+              "depth3D" : 1,
+              "extrapolateBaselines" : true,
+              "fontEffects" : "Normal",
+              "fontEncoding" : "Unicode",
+              "fontFamilyName" : "Tahoma",
+              "fontStyleName" : "Regular",
+              "fontType" : "Unspecified",
+              "haloSize" : 1,
+              "height" : 10,
+              "hinting" : "Default",
+              "horizontalAlignment" : "Left",
+              "kerning" : true,
+              "letterWidth" : 100,
+              "ligatures" : true,
+              "lineGapType" : "ExtraLeading",
+              "symbol" : {
+                "type" : "CIMPolygonSymbol",
+                "symbolLayers" : [
+                  {
+                    "type" : "CIMSolidFill",
+                    "enable" : true,
+                    "color" : {
+                      "type" : "CIMRGBColor",
+                      "values" : [
+                        0,
+                        0,
+                        0,
+                        100
+                      ]
+                    }
+                  }
+                ],
+                "angleAlignment" : "Map"
+              },
+              "textCase" : "Normal",
+              "textDirection" : "LTR",
+              "verticalAlignment" : "Bottom",
+              "verticalGlyphOrientation" : "Right",
+              "wordSpacing" : 100,
+              "billboardMode3D" : "FaceNearPlane"
+            }
+          },
+          "useCodedValue" : true,
+          "visibility" : true,
+          "iD" : -1
+        }
+      ],
+      "labelVisibility" : true,
+      "renderer" : {
+        "type" : "CIMSimpleRenderer",
+        "sampleSize" : 10000,
+        "patch" : "Default",
+        "symbol" : {
+          "type" : "CIMSymbolReference",
+          "symbol" : {
+            "type" : "CIMPolygonSymbol",
+            "symbolLayers" : [
+              {
+                "type" : "CIMSolidStroke",
+                "enable" : true,
+                "colorLocked" : true,
+                "capStyle" : "Butt",
+                "joinStyle" : "Round",
+                "lineStyle3D" : "Strip",
+                "miterLimit" : 10,
+                "width" : 1,
+                "height3D" : 1,
+                "anchor3D" : "Center",
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    110,
+                    110,
+                    110,
+                    100
+                  ]
+                }
+              },
+              {
+                "type" : "CIMSolidFill",
+                "enable" : true,
+                "color" : {
+                  "type" : "CIMRGBColor",
+                  "values" : [
+                    0,
+                    100,
+                    255,
+                    36.862743377685547
+                  ]
+                }
+              }
+            ],
+            "angleAlignment" : "Map"
+          }
+        }
+      },
+      "scaleSymbols" : true,
+      "snappable" : true
+    },
+    {
+      "type" : "CIMRasterLayer",
+      "name" : "EnrieSala_S2_RGBN",
+      "uRI" : "CIMPATH=map/boareflectance10m_mtd_m_clip.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant",
+        "start" : -62135596800000
+      },
+      "metadataURI" : "CIMPATH=Metadata/7325c19173d618a4285198cfe1af1d16.xml",
+      "useSourceMetadata" : true,
+      "description" : "BOAReflectance10m_MTD_M_Clip",
+      "layerElevation" : {
+        "type" : "CIMLayerElevationSurface",
+        "elevationSurfaceLayerURI" : "CIMPATH=Map/620655093e8b4635a03fe49769195492.json"
+      },
+      "layerType" : "Operational",
+      "showLegends" : true,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "dataConnection" : {
+        "type" : "CIMStandardDataConnection",
+        "workspaceConnectionString" : "DATABASE=.\\P2_OBIA_Base_Project\\P2_OBIA_Base_Project\\P2_OBIA_Base_Project.gdb",
+        "workspaceFactory" : "FileGDB",
+        "dataset" : "BOAReflectance10m_MTD_M_Clip",
+        "datasetType" : "esriDTRasterDataset"
+      },
+      "colorizer" : {
+        "type" : "CIMRasterRGBColorizer",
+        "resamplingType" : "BilinearInterpolation",
+        "contrast" : 10,
+        "noDataColor" : {
+          "type" : "CIMRGBColor",
+          "values" : [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "alphaBandIndex" : -1,
+        "backgroundColor" : {
+          "type" : "CIMRGBColor",
+          "values" : [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "blueBandIndex" : 0,
+        "gammaB" : 2.0457688047156948,
+        "gammaG" : 2.0457688047156948,
+        "gammaR" : 2.0457688047156948,
+        "greenBandIndex" : 1,
+        "maxPercent" : 0.25,
+        "minPercent" : 0.25,
+        "redBandIndex" : 2,
+        "standardDeviationsParam" : 2,
+        "stretchStatsBlue" : {
+          "type" : "StatsHistogram",
+          "min" : 1020,
+          "max" : 8440,
+          "mean" : 1266.205851316452,
+          "stddev" : 94.179368397876786,
+          "limitMin" : 1020,
+          "limitMax" : 8440,
+          "histogram" : [
+            2.384185791015625e-07,
+            0,
+            1.6689300537109375e-05,
+            0.0011098384857177734,
+            0.0022096633911132812,
+            0.029302358627319336,
+            0.22913408279418945,
+            0.34545731544494629,
+            0.15834379196166992,
+            0.070455551147460938,
+            0.050030231475830078,
+            0.034331083297729492,
+            0.022003889083862305,
+            0.013394832611083984,
+            0.0094811916351318359,
+            0.0066189765930175781,
+            0.0049810409545898438,
+            0.0038025379180908203,
+            0.0032064914703369141,
+            0.00251007080078125,
+            0.0021340847015380859,
+            0.0017015933990478516,
+            0.0014557838439941406,
+            0.0012371540069580078,
+            0.0011057853698730469,
+            0.00093603134155273438,
+            0.0007801055908203125,
+            0.00062298774719238281,
+            0.000518798828125,
+            0.00043129920959472656,
+            0.00040602684020996094,
+            0.00038599967956542969,
+            0.00031137466430664062,
+            0.00024700164794921875,
+            0.00020289421081542969,
+            0.00015115737915039062,
+            0.00012755393981933594,
+            0.000102996826171875,
+            8.0108642578125e-05,
+            6.6041946411132812e-05,
+            5.5789947509765625e-05,
+            4.6968460083007812e-05,
+            3.8385391235351562e-05,
+            3.4332275390625e-05,
+            3.4570693969726562e-05,
+            2.8848648071289062e-05,
+            3.1232833862304688e-05,
+            2.3126602172851562e-05,
+            2.0265579223632812e-05,
+            1.6689300537109375e-05,
+            1.7642974853515625e-05,
+            1.5735626220703125e-05,
+            1.5974044799804688e-05,
+            1.2159347534179688e-05,
+            1.239776611328125e-05,
+            1.1682510375976562e-05,
+            7.62939453125e-06,
+            8.58306884765625e-06,
+            9.059906005859375e-06,
+            7.8678131103515625e-06,
+            8.58306884765625e-06,
+            5.4836273193359375e-06,
+            5.7220458984375e-06,
+            6.9141387939453125e-06,
+            4.0531158447265625e-06,
+            3.814697265625e-06,
+            4.291534423828125e-06,
+            2.6226043701171875e-06,
+            2.384185791015625e-06,
+            4.291534423828125e-06,
+            3.0994415283203125e-06,
+            5.0067901611328125e-06,
+            5.4836273193359375e-06,
+            2.6226043701171875e-06,
+            3.337860107421875e-06,
+            2.6226043701171875e-06,
+            1.1920928955078125e-06,
+            9.5367431640625e-07,
+            1.9073486328125e-06,
+            1.1920928955078125e-06,
+            2.6226043701171875e-06,
+            2.1457672119140625e-06,
+            9.5367431640625e-07,
+            2.6226043701171875e-06,
+            2.6226043701171875e-06,
+            2.384185791015625e-06,
+            9.5367431640625e-07,
+            2.6226043701171875e-06,
+            1.430511474609375e-06,
+            2.1457672119140625e-06,
+            1.9073486328125e-06,
+            1.1920928955078125e-06,
+            1.1920928955078125e-06,
+            1.6689300537109375e-06,
+            1.430511474609375e-06,
+            2.86102294921875e-06,
+            1.1920928955078125e-06,
+            9.5367431640625e-07,
+            2.384185791015625e-07,
+            1.430511474609375e-06,
+            1.6689300537109375e-06,
+            1.430511474609375e-06,
+            7.152557373046875e-07,
+            1.430511474609375e-06,
+            1.430511474609375e-06,
+            4.76837158203125e-07,
+            9.5367431640625e-07,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            9.5367431640625e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            1.1920928955078125e-06,
+            1.1920928955078125e-06,
+            2.1457672119140625e-06,
+            1.1920928955078125e-06,
+            0,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            4.76837158203125e-07,
+            1.430511474609375e-06,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            9.5367431640625e-07,
+            0,
+            0,
+            7.152557373046875e-07,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            1.1920928955078125e-06,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            0,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            0,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            9.5367431640625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4.76837158203125e-07,
+            0,
+            7.152557373046875e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            4.76837158203125e-07,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07
+          ],
+          "nsamples" : 4194304,
+          "resolution" : 29.098039215686274
+        },
+        "stretchStatsGreen" : {
+          "type" : "StatsHistogram",
+          "min" : 1068,
+          "max" : 7852,
+          "mean" : 1465.1276490688324,
+          "stddev" : 126.58851949326035,
+          "limitMin" : 1068,
+          "limitMax" : 7852,
+          "histogram" : [
+            0.00016880035400390625,
+            0.0010995864868164062,
+            0.00051999092102050781,
+            0.00030994415283203125,
+            0.00060987472534179688,
+            0.0012190341949462891,
+            0.0025670528411865234,
+            0.0038182735443115234,
+            0.011824607849121094,
+            0.031136274337768555,
+            0.06896209716796875,
+            0.11133956909179688,
+            0.1442868709564209,
+            0.13550806045532227,
+            0.11529111862182617,
+            0.080474376678466797,
+            0.059759616851806641,
+            0.040524959564208984,
+            0.03377842903137207,
+            0.02894282341003418,
+            0.028122425079345703,
+            0.023878574371337891,
+            0.018645524978637695,
+            0.014134883880615234,
+            0.010015249252319336,
+            0.0067238807678222656,
+            0.0050878524780273438,
+            0.0038764476776123047,
+            0.00328826904296875,
+            0.0024857521057128906,
+            0.0020067691802978516,
+            0.001495361328125,
+            0.0012547969818115234,
+            0.00097703933715820312,
+            0.0008106231689453125,
+            0.00067234039306640625,
+            0.00060224533081054688,
+            0.00048613548278808594,
+            0.00040435791015625,
+            0.00034356117248535156,
+            0.00031328201293945312,
+            0.00025606155395507812,
+            0.00022029876708984375,
+            0.00018858909606933594,
+            0.00020599365234375,
+            0.0001583099365234375,
+            0.00013709068298339844,
+            0.00010323524475097656,
+            0.00011849403381347656,
+            9.0837478637695312e-05,
+            8.6545944213867188e-05,
+            7.9393386840820312e-05,
+            6.771087646484375e-05,
+            6.0558319091796875e-05,
+            4.76837158203125e-05,
+            4.3392181396484375e-05,
+            3.8385391235351562e-05,
+            2.5510787963867188e-05,
+            2.5033950805664062e-05,
+            2.193450927734375e-05,
+            1.52587890625e-05,
+            1.5020370483398438e-05,
+            1.049041748046875e-05,
+            1.4066696166992188e-05,
+            1.430511474609375e-05,
+            8.58306884765625e-06,
+            8.58306884765625e-06,
+            8.58306884765625e-06,
+            7.62939453125e-06,
+            6.198883056640625e-06,
+            6.198883056640625e-06,
+            5.245208740234375e-06,
+            6.67572021484375e-06,
+            3.814697265625e-06,
+            5.0067901611328125e-06,
+            3.0994415283203125e-06,
+            3.5762786865234375e-06,
+            2.6226043701171875e-06,
+            3.0994415283203125e-06,
+            2.384185791015625e-06,
+            4.0531158447265625e-06,
+            2.384185791015625e-06,
+            5.4836273193359375e-06,
+            2.6226043701171875e-06,
+            2.6226043701171875e-06,
+            3.337860107421875e-06,
+            1.6689300537109375e-06,
+            2.6226043701171875e-06,
+            1.430511474609375e-06,
+            3.0994415283203125e-06,
+            2.1457672119140625e-06,
+            2.1457672119140625e-06,
+            1.6689300537109375e-06,
+            1.9073486328125e-06,
+            2.1457672119140625e-06,
+            2.1457672119140625e-06,
+            7.152557373046875e-07,
+            7.152557373046875e-07,
+            1.430511474609375e-06,
+            1.1920928955078125e-06,
+            1.6689300537109375e-06,
+            1.1920928955078125e-06,
+            7.152557373046875e-07,
+            9.5367431640625e-07,
+            2.384185791015625e-06,
+            1.6689300537109375e-06,
+            1.9073486328125e-06,
+            2.6226043701171875e-06,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            1.430511474609375e-06,
+            1.6689300537109375e-06,
+            4.76837158203125e-07,
+            9.5367431640625e-07,
+            9.5367431640625e-07,
+            9.5367431640625e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            1.6689300537109375e-06,
+            7.152557373046875e-07,
+            7.152557373046875e-07,
+            1.1920928955078125e-06,
+            1.1920928955078125e-06,
+            9.5367431640625e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            1.1920928955078125e-06,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            7.152557373046875e-07,
+            9.5367431640625e-07,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            0,
+            1.1920928955078125e-06,
+            0,
+            4.76837158203125e-07,
+            1.430511474609375e-06,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            1.1920928955078125e-06,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            9.5367431640625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            4.76837158203125e-07,
+            0,
+            0,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            4.76837158203125e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            0,
+            4.76837158203125e-07,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7.152557373046875e-07
+          ],
+          "nsamples" : 4194304,
+          "resolution" : 26.603921568627452
+        },
+        "stretchStatsRed" : {
+          "type" : "StatsHistogram",
+          "min" : 1046,
+          "max" : 10208,
+          "mean" : 1268.3905007839203,
+          "stddev" : 160.62372442247198,
+          "limitMin" : 1046,
+          "limitMax" : 10208,
+          "histogram" : [
+            0.0011265277862548828,
+            0.0010485649108886719,
+            0.013182163238525391,
+            0.22431230545043945,
+            0.34370970726013184,
+            0.13544416427612305,
+            0.059385776519775391,
+            0.041638612747192383,
+            0.034251928329467773,
+            0.028505563735961914,
+            0.024257183074951172,
+            0.019080400466918945,
+            0.014199972152709961,
+            0.01036381721496582,
+            0.0077085494995117188,
+            0.0061278343200683594,
+            0.0049042701721191406,
+            0.0039687156677246094,
+            0.0033009052276611328,
+            0.0030376911163330078,
+            0.0027501583099365234,
+            0.0024983882904052734,
+            0.0020565986633300781,
+            0.0017135143280029297,
+            0.0015211105346679688,
+            0.0012979507446289062,
+            0.0011279582977294922,
+            0.00097799301147460938,
+            0.00077772140502929688,
+            0.00064301490783691406,
+            0.00047636032104492188,
+            0.00042629241943359375,
+            0.00034666061401367188,
+            0.00032019615173339844,
+            0.00027561187744140625,
+            0.00026822090148925781,
+            0.00022935867309570312,
+            0.00021409988403320312,
+            0.0002155303955078125,
+            0.00020503997802734375,
+            0.00020003318786621094,
+            0.00017380714416503906,
+            0.00018239021301269531,
+            0.00016617774963378906,
+            0.00017452239990234375,
+            0.00014853477478027344,
+            0.00014376640319824219,
+            0.00012946128845214844,
+            0.00011587142944335938,
+            9.6082687377929688e-05,
+            7.0095062255859375e-05,
+            6.008148193359375e-05,
+            5.3167343139648438e-05,
+            4.4345855712890625e-05,
+            4.0292739868164062e-05,
+            4.00543212890625e-05,
+            3.2663345336914062e-05,
+            2.5987625122070312e-05,
+            2.6226043701171875e-05,
+            2.1696090698242188e-05,
+            1.3589859008789062e-05,
+            1.2874603271484375e-05,
+            1.0728836059570312e-05,
+            1.1682510375976562e-05,
+            8.106231689453125e-06,
+            6.198883056640625e-06,
+            4.0531158447265625e-06,
+            3.814697265625e-06,
+            4.291534423828125e-06,
+            2.1457672119140625e-06,
+            4.0531158447265625e-06,
+            2.384185791015625e-06,
+            3.814697265625e-06,
+            2.6226043701171875e-06,
+            2.86102294921875e-06,
+            7.152557373046875e-07,
+            2.1457672119140625e-06,
+            2.6226043701171875e-06,
+            1.430511474609375e-06,
+            7.152557373046875e-07,
+            2.1457672119140625e-06,
+            1.430511474609375e-06,
+            9.5367431640625e-07,
+            1.6689300537109375e-06,
+            4.76837158203125e-07,
+            2.6226043701171875e-06,
+            7.152557373046875e-07,
+            1.1920928955078125e-06,
+            1.9073486328125e-06,
+            1.430511474609375e-06,
+            2.1457672119140625e-06,
+            7.152557373046875e-07,
+            1.1920928955078125e-06,
+            9.5367431640625e-07,
+            1.1920928955078125e-06,
+            4.76837158203125e-07,
+            1.1920928955078125e-06,
+            2.384185791015625e-07,
+            9.5367431640625e-07,
+            1.430511474609375e-06,
+            1.1920928955078125e-06,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            1.1920928955078125e-06,
+            1.1920928955078125e-06,
+            4.76837158203125e-07,
+            1.1920928955078125e-06,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            9.5367431640625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            9.5367431640625e-07,
+            4.76837158203125e-07,
+            9.5367431640625e-07,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            9.5367431640625e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            4.76837158203125e-07,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            0,
+            4.76837158203125e-07,
+            7.152557373046875e-07,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            7.152557373046875e-07,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            0,
+            4.76837158203125e-07,
+            0,
+            0,
+            4.76837158203125e-07,
+            0,
+            4.76837158203125e-07,
+            0,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            0,
+            4.76837158203125e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            4.76837158203125e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            4.76837158203125e-07,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            2.384185791015625e-07,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2.384185791015625e-07
+          ],
+          "nsamples" : 4194304,
+          "resolution" : 35.929411764705883
+        },
+        "stretchStatsType" : "Dataset",
+        "stretchType" : "PercentMinimumMaximum",
+        "useBlueBand" : true,
+        "useDefaultMapping" : true,
+        "useGammaStretch" : true,
+        "useGreenBand" : true,
+        "useRedBand" : true,
+        "customStretchMaxRed" : 1,
+        "customStretchMaxGreen" : 1,
+        "customStretchMaxBlue" : 1
+      }
+    }
+  ],
+  "binaryReferences" : [
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/01a124e4748b1d0a8125146eb0393630.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\">\r\n\t<Esri>\r\n\t\t<CreaDate>20241207</CreaDate>\r\n\t\t<CreaTime>20351000</CreaTime>\r\n\t\t<ArcGISFormat>1.0</ArcGISFormat>\r\n\t\t<SyncOnce>TRUE</SyncOnce>\r\n\t</Esri>\r\n\t<dataIdInfo>\r\n\t\t<idCitation>\r\n\t\t\t<resTitle>Reclassified_202412072033485501555</resTitle>\r\n\t\t</idCitation>\r\n\t\t<idAbs>Reclassified_202412072033485501555</idAbs>\r\n\t\t<idCredit>\r\n\t\t</idCredit>\r\n\t\t<idPurp>\r\n\t\t</idPurp>\r\n\t\t<resConst>\r\n\t\t\t<Consts>\r\n\t\t\t\t<useLimit>\r\n\t\t\t\t</useLimit>\r\n\t\t\t</Consts>\r\n\t\t</resConst>\r\n\t</dataIdInfo>\r\n</metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/1d94a3c6b5e8d202b1318ff955fb31fe.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\">\r\n\t<Esri>\r\n\t\t<CreaDate>20241210</CreaDate>\r\n\t\t<CreaTime>15591200</CreaTime>\r\n\t\t<ArcGISFormat>1.0</ArcGISFormat>\r\n\t\t<SyncOnce>TRUE</SyncOnce>\r\n\t</Esri>\r\n</metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/29f9dc62cc4f37d65a30df76873ecbe7.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\">\r\n\t<Esri>\r\n\t\t<CreaDate>20241210</CreaDate>\r\n\t\t<CreaTime>15593900</CreaTime>\r\n\t\t<ArcGISFormat>1.0</ArcGISFormat>\r\n\t\t<SyncOnce>TRUE</SyncOnce>\r\n\t</Esri>\r\n</metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/6edf02a7b5f6409887aa889d87246edc.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\">\r\n\t<Esri>\r\n\t\t<CreaDate>20241210</CreaDate>\r\n\t\t<CreaTime>16014900</CreaTime>\r\n\t\t<ArcGISFormat>1.0</ArcGISFormat>\r\n\t\t<SyncOnce>TRUE</SyncOnce>\r\n\t</Esri>\r\n</metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/7325c19173d618a4285198cfe1af1d16.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\">\r\n\t<Esri>\r\n\t\t<CreaDate>20241210</CreaDate>\r\n\t\t<CreaTime>15582100</CreaTime>\r\n\t\t<ArcGISFormat>1.0</ArcGISFormat>\r\n\t\t<SyncOnce>TRUE</SyncOnce>\r\n\t</Esri>\r\n</metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/99df522bc8ba49edc9f2af13cb2561a0.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\">\r\n\t<Esri>\r\n\t\t<CreaDate>20241205</CreaDate>\r\n\t\t<CreaTime>12260800</CreaTime>\r\n\t\t<ArcGISFormat>1.0</ArcGISFormat>\r\n\t\t<SyncOnce>TRUE</SyncOnce>\r\n\t</Esri>\r\n\t<dataIdInfo>\r\n\t\t<idCitation>\r\n\t\t\t<resTitle>Oxford</resTitle>\r\n\t\t</idCitation>\r\n\t\t<idAbs>BASE_NS_GeoNAM_NS_Tow_Buffer</idAbs>\r\n\t\t<idCredit>\r\n\t\t</idCredit>\r\n\t\t<idPurp>\r\n\t\t</idPurp>\r\n\t\t<resConst>\r\n\t\t\t<Consts>\r\n\t\t\t\t<useLimit>\r\n\t\t\t\t</useLimit>\r\n\t\t\t</Consts>\r\n\t\t</resConst>\r\n\t</dataIdInfo>\r\n</metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/a0476dea535d9f3b947c39289c03adcf.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\"><Esri><CreaDate>20231123</CreaDate><CreaTime>14384100</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Map</resTitle></idCitation></dataIdInfo><Binary><Thumbnail><Data EsriPropertyType=\"PictureX\">/9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a\r\nHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy\r\nMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCADIASwDAREA\r\nAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA\r\nAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3\r\nODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm\r\np6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA\r\nAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx\r\nBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK\r\nU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3\r\nuLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2ieNn\r\nt3QLhXQjg9M8fhU83clKxD9kMjAieZACPkVuOO36USdtUCY5LMpGEa7nY85LOcnNSm30DmHwQGJt\r\n7TSv8u3azZA98etXKDbsiOdWuySU8AZ+orShC12zOq9khwIVc7cVhOTk9WaxilsN8xj/AA4H8qm1\r\nh+g5WA6ZYnqRSAUSY5KkfhQhkm92GfLwvqTVjICzSSZP3c4GKG7EvUewUR/L25qQew48rSuARqJF\r\nw3bgg1q1rzdxR10GMDGSrfdHes2tSiI3duqSHz1GOpz0A61SixWYj3kPnbN6k/XqacU1qO2g9YWZ\r\nA2etdCrq9mjCVHsyMgqcHrW6aaujFqzsxKYgoAKACgAoAlSXauDyP5VzVaTbujohUVrMmWROoasV\r\n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</Data></Thumbnail></Binary></metadata>\r\n"
+    },
+    {
+      "type" : "CIMBinaryReference",
+      "uRI" : "CIMPATH=Metadata/c63e4fbde00d2dd7613981a5e0204998.xml",
+      "data" : "<?xml version=\"1.0\"?>\r\n<metadata xml:lang=\"en\">\r\n\t<Esri>\r\n\t\t<CreaDate>20241210</CreaDate>\r\n\t\t<CreaTime>16024800</CreaTime>\r\n\t\t<ArcGISFormat>1.0</ArcGISFormat>\r\n\t\t<SyncOnce>TRUE</SyncOnce>\r\n\t</Esri>\r\n</metadata>\r\n"
+    }
+  ],
+  "tableDefinitions" : [
+    {
+      "type" : "CIMStandaloneTable",
+      "name" : "EnrieSala_S2_RGBN_OBIA_AA",
+      "uRI" : "CIMPATH=map/confusionmatrix_202412072033398880215.json",
+      "sourceModifiedTime" : {
+        "type" : "TimeInstant",
+        "start" : -62135596800000
+      },
+      "metadataURI" : "CIMPATH=Metadata/c63e4fbde00d2dd7613981a5e0204998.xml",
+      "useSourceMetadata" : true,
+      "displayField" : "ClassValue",
+      "editable" : true,
+      "dataConnection" : {
+        "type" : "CIMStandardDataConnection",
+        "workspaceConnectionString" : "DATABASE=.\\P2_OBIA_Base_Project\\P2_OBIA_Base_Project\\P2_OBIA_Base_Project.gdb",
+        "workspaceFactory" : "FileGDB",
+        "dataset" : "ConfusionMatrix_202412072033398880215",
+        "datasetType" : "esriDTTable"
+      },
+      "autoGenerateRowTemplates" : true,
+      "serviceTableID" : -1,
+      "showPopups" : true
+    }
+  ],
+  "elevationSurfaceLayerDefinitions" : [
+    {
+      "type" : "CIMElevationSurfaceLayer",
+      "name" : "Ground",
+      "uRI" : "CIMPATH=Map/620655093e8b4635a03fe49769195492.json",
+      "useSourceMetadata" : true,
+      "description" : "Ground",
+      "expanded" : true,
+      "layerType" : "Operational",
+      "showLegends" : false,
+      "visibility" : true,
+      "displayCacheType" : "Permanent",
+      "maxDisplayCacheAge" : 5,
+      "showPopups" : true,
+      "serviceLayerID" : -1,
+      "refreshRate" : -1,
+      "refreshRateUnit" : "esriTimeUnitsSeconds",
+      "blendingMode" : "Alpha",
+      "allowDrapingOnIntegratedMesh" : true,
+      "elevationMode" : "BaseGlobeSurface",
+      "verticalExaggeration" : 1,
+      "color" : {
+        "type" : "CIMRGBColor",
+        "values" : [
+          255,
+          255,
+          255,
+          100
+        ]
+      },
+      "surfaceTINShadingMode" : "Smooth"
+    }
+  ]
+}
