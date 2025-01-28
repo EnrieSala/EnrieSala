@@ -1,6 +1,6 @@
 # Enrie Sala - GIS Specialist
 ## About Me
-I'm a GIS specialist with a strong background in biology and environmental sciences, currently pursuing an Advanced GIS Post-Graduate Certificate at Nova Scotia Community College. Feel free to explore my [repositories](https://github.com/EnrieSala/EnrieSala/tree/main/Assets) to see examples of my GIS projects and coding skills!
+I'm a GIS specialist with a strong background in biology and environmental sciences, currently pursuing an Advanced GIS Post-Graduate Certificate at Nova Scotia Community College. Feel free to explore my [repository](https://github.com/EnrieSala/EnrieSala/tree/main/Assets) to see examples of my GIS projects and coding skills!
 
 ## Technical Skills
 GIS Software: ESRI ArcGIS suite (AGOL, ArcGIS Pro, ArcGIS Instant Apps)
