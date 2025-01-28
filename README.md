@@ -20,5 +20,6 @@ Contact me @ [enrie98@gmail.com](mail.google.com.) if you have any questions.
 
 - [Simulated Habitat Analysis](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedHabitatAnalysis)
 
+-[Wiildfire Detection using Imagery Enhancement Techniques](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/ImageEnhancementWildfireDetection)
 
 
