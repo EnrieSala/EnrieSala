@@ -39,8 +39,11 @@ GROUP BY composition;
 Output:
 
 Road Composition | Total Road Length
+
 ------------------+-------------------
+
 GR               | 123.45
+
 PV               | 98.76
 
 ## To-Do
