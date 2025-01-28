@@ -28,7 +28,7 @@ The OBIA classification results will produce a land cover map of the 20 km² Are
 - Snow and ice
 
 ## Project Drawbacks
-Some drawbacks of this classification include it's limmitation to a 20 km² area (may not be representative of larger regions). It also relies on the most recent Sentinel 2 image, which might not capture seasonal variations. Additionally, the accuracy is dependent on the quality of the reference points and visual interpretation.
+Some drawbacks of this classification include it's limitation to a 20 km² area (may not be representative of larger regions). It also relies on the most recent Sentinel 2 image, which might not capture seasonal variations. Additionally, the accuracy is dependent on the quality of the reference points and visual interpretation.
 
 ## Improvements
 - Explore additional Sentinel 2 bands to enhance classification accuracy
