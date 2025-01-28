@@ -20,6 +20,6 @@ Contact me @ [enrie98@gmail.com](mail.google.com.) if you have any questions.
 
 - [Wiildfire Detection using Imagery Enhancement Techniques](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/ImageEnhancementWildfireDetection)
 
--[Simulated Spatial Database Creation and Management using PostGreSQL](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedSpatialDatabaseManagement)
+- [Simulated Spatial Database Creation and Management using PostGreSQL](https://github.com/EnrieSala/EnrieSala/tree/main/Assets/SimulatedSpatialDatabaseManagement)
 
 
