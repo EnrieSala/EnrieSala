@@ -6,26 +6,22 @@ This project contains two R Markdown (RMD) files that analyze labour force stati
 2. `Project2SalaEnrie.Rmd`: This file contains the exploratory data analysis of the prepared dataset.
 
 ## Features
-Data extraction and transformation from multiple CSV sources
-Geospatial component integration
-Gender-based labour force and population analysis
-Data cleaning and imputation techniques
-Exploratory Data Analysis (EDA) with visualizations
+- Data extraction and transformation from multiple CSV sources
+- Geospatial component integration (Indigenous Band Locations)
+- Gender-based labour force and population analysis
+- Data cleaning and imputation techniques
+- Exploratory Data Analysis (EDA) with visualizations
 
 ## Requirements
-R (version 4.0.0 or higher)
-Required R packages:
-tidyverse
-ggplot2
-GGally
-pheatmap
-DMwR2
-Usage
-Clone the repository
-Set up the R environment with required packages
-Update file paths in the R scripts to match your local directory structure
-Run the ETL pipeline script (Project1ETLPipelinewithGender.Rmd)
-Run the EDA script (Project2SalaEnrie.Rmd)
+- R (version 4.0.0 or higher)
+- Required R packages: (tidyverse,ggplot2,GGally,pheatmap,DMwR2)
+
+## Usage
+1. Clone the repository
+2. Set up the R environment with required packages
+3. Update file paths in the R scripts to match your local directory structure
+4. Run the ETL pipeline script (Project1ETLPipelinewithGender.Rmd)
+5. Run the EDA script (Project2SalaEnrie.Rmd)
 
 ## Data Processing Steps
 Data Extraction
