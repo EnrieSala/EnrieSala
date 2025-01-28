@@ -1,62 +1,71 @@
-# First Nations Employment Statistics Analysis Based on Gender 
-This repository contains two R Markdown (RMD) files that focus on analyzing indigenous population and labour force data in Canada
-including gender as a dimension. The files are part of a two stage analysis project that includes data extraction,
-transformation, loading (ETL), and exploratory data analysis (EDA).
+# Indigenous Labour Force Analysis Project
+## Overview
+This project contains two R Markdown (RMD) files that analyze labour force statistics and population data for Indigenous communities across Canada. The files are part of a two stage analysis project that includes data extraction, transformation, loading (ETL), and exploratory data analysis (EDA). It combines geographical data from First Nations' Locations with labour force statistics and gender-based population data to provide insights into employment patterns and demographic distributions within Indigenous communities.
+
 1. `Project1ETLPipelinewithGender.Rmd`: This file contains the ETL process for preparing the dataset.
 2. `Project2SalaEnrie.Rmd`: This file contains the exploratory data analysis of the prepared dataset.
 
-Both files use R r to process, analyze data and ccreate visuals using data from Statistics Canada.
-This analysis perovides insights into Indigenous employment, population distribution, and related socieconomic
-factors. 
+## Features
+Data extraction and transformation from multiple CSV sources
+Geospatial component integration
+Gender-based labour force and population analysis
+Data cleaning and imputation techniques
+Exploratory Data Analysis (EDA) with visualizations
 
 ## Requirements
-R and RStudio
-Required R packages: tidyverse, ggplot2, GGally, pheatmap, DMwR2
-## Usage
-Open the .Rmd files in RStudio and run the code chunks sequentially to reproduce the analysis.
+R (version 4.0.0 or higher)
+Required R packages:
+tidyverse
+ggplot2
+GGally
+pheatmap
+DMwR2
+Usage
+Clone the repository
+Set up the R environment with required packages
+Update file paths in the R scripts to match your local directory structure
+Run the ETL pipeline script (Project1ETLPipelinewithGender.Rmd)
+Run the EDA script (Project2SalaEnrie.Rmd)
 
-# README for Project1ETLPipelineSalaEnrie.Rmd
-This R Markdown file contains the Extract, Transform, Load (ETL) process for analyzing Indigenous labor force data in Canada.
-
-## Data Sources
-Data sources include: First Nations' Locations CSV and membership in a First Nation or Indian band by labour force status: Canada, provinces and territories CSV. 
-
-## Key Features
-Data extraction from CSV files
-Data cleaning and transformation
-Handling of missing values using mode and KNN imputation
-Merging of datasets
-Creation of categorical variables through binning
-Main Functions
-get_mode(): Calculates the mode of a column
-Data type adjustments and conversions
-Row and column selections
-Data joining using left_join()
-Output
-A cleaned and transformed dataset combining geographical and labor force data for Indigenous communities.
-
-# README for Project2SalaEnrie.Rmd
-Exploratory Data Analysis of Indigenous Labor Force and Population Data
-This R Markdown file contains the Exploratory Data Analysis (EDA) of the dataset created in Project 1, with additional gender-based labor force statistics.
-## Data Sources
-Processed data from Project 1
-Additional gender-based labor force statistics
-## Key Analyses
+## Data Processing Steps
+Data Extraction
+Load CSV files for First Nations' locations and labour force statistics
+Filter and clean raw data
+Data Transformation
+Perform data type adjustments
+Handle missing values using mode and KNN imputation
+Create bins for rate variables
+Merge datasets using left join
+Data Loading
+Create tidy datasets for analysis
+Export processed data for EDA
+Exploratory Data Analysis
 Single Variable Numerical Analysis
-Labor Count Analysis
-Population Analysis
-Correlation Analysis (Numeric Variables)
-Single Categorical Variable Analysis
+Labour Count distribution
+Population distribution by gender and location
+Correlation Analysis
+Examine relationships between Labour Count, Rate, and Population
+Categorical Variable Analysis
+Employment rate distributions
+Gender and on/off reserve population proportions
 Multiple Categorical Variable Analysis
-Visualizations
-Density plots and histograms
-Box plots
-Scatter plots
+Heatmap of population distribution by band and type
+
+## Output
+Processed datasets: 'indigenousbandsgender.csv' and 'indigenousbandsgender2.csv'
+Visualizations:
+Distribution plots
 Correlation matrices
-Heatmaps
-## Key Findings
-Employment rates and challenges in Indigenous communities
-Gender differences in population distribution
-On-reserve vs. off-reserve population patterns
-Geographical variations in labor force participation
-The analysis provides insights into labor force participation and population distribution patterns in Indigenous communities across Canada.
+Boxplots
+Stacked and proportional bar charts
+Population distribution heatmap
+Project Drawbacks
+Limited to a 20 km² area of interest
+Reliance on most recent available data, which may not capture seasonal variations
+Potential for data quality issues in source datasets
+## To Do
+Implement automated cloud detection for Sentinel 2 image selection
+Explore additional Sentinel 2 bands to enhance classification accuracy
+Increase the number of reference points for improved statistical robustness
+Develop an interactive web map to complement static visualizations
+Implement version control for code and data products
