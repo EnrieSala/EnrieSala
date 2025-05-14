@@ -1,0 +1,44 @@
+/*
+    Program: styles.css
+    Programmer: Enrie Sala 
+    Purpose: styling for 
+    index.html (Halifax Fire
+    Services Inventory Map)
+    Date: April 12, 2025
+*/
+
+/* General Styles */
+body {
+    background-color: rgb(127, 154, 189); 
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%; 
+    width: 100%; 
+}
+
+/* Logo/Image Section */
+#logo {
+    margin: 10px auto; /* Center the image horizontally with some margin */
+    height: 30px; 
+    position: absolute;
+    margin-top: -3%;
+}
+
+/* Map */
+#mainMap {
+    height: 100%; /* Adjust height to leave room for title and image */
+}
+
+/* Title */
+#title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 10px 0 0;
+    flex: 1;
+    text-align: center;
+    line-height: 50px;
+}
