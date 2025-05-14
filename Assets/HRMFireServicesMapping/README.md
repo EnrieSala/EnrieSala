@@ -2,11 +2,22 @@
 This web map application visualizes key fire services infrastructure and geographic features for the Municipality of Halifax. It combines interactive mapping, custom symbology, and informative popups to support fire services planning and public awareness.
 
 ## Overview
-The application consists of two main files:
+The application consists of the following files, organized for clarity and maintainability:
+- index.html (main directory): The entry point that sets up the web page and loads required resources.
+- /styles/style.css: Provides all styling for the application, including layout, colors, and logo placement.
+- /scripts/main.js: Contains the JavaScript logic for building the interactive map, adding data layers, and enabling widgets.
+- /logos/Esri_Canada_Logo_4C_ECFlatLogo_White.jpg: The Esri Canada logo displayed in the application.
 
-index.html: The HTML entry point that sets up the web page container for the map and loads the required JavaScript.
-
-main.js: The core JavaScript file that builds the interactive map using the ArcGIS JavaScript API, adds data layers, configures symbology, and enables interactive widgets.
+### Folder structure 
+halifax-fire-services-app/
+│
+├── index.html
+├── styles/
+│   └── style.css
+├── scripts/
+│   └── main.js
+└── logos/
+    └── Esri_Canada_Logo_4C_ECFlatLogo_White.jpg
 
 ## Features
 3D Interactive Map: Utilizes the ArcGIS SceneView for a 3D perspective over Halifax.
@@ -34,9 +45,18 @@ main.js: The core JavaScript file that builds the interactive map using the ArcG
 - No installation required
 
 ## Usage
-- Open index.html in your browser.
-- Interact with the map: pan, zoom, and click features for more information
-- Use widgets (Home, Basemap Toggle, Legend, Line of Sight, Elevation Profile) for enhanced navigation and analysis.
+### Download and Organize Files
+Download all files and organize them as shown in the folder structure above:
+1. Place index.html in the root folder.
+2. Place style.css in a styles subfolder.
+3. Place main.js in a scripts subfolder.
+4. Place the logo image in a logos subfolder.
+
+### Open the Application
+1. Open the index.html file from your local drive in a modern web browser (Chrome, Firefox, Edge).
+2. Interact with the Map
+3. Pan, zoom, and click features for more information.
+4. Use widgets for navigation and spatial analysis.
 
 ## File Descriptions
 ### index.html
