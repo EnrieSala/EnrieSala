@@ -30,7 +30,7 @@ Update the GDB variable in the script to point to your target geodatabase:
 3. Run the Script
 
 ## Result
-A feature class named NB_ClimateData3 will be created in your geodatabase, containing a point for each city with associated temperature attributes.
+A feature class named will be created in your geodatabase, containing a point for each city with associated temperature attributes.
 
 ## How It Works
 The script is organized into several key functions that together automate the process of creating a spatial dataset of New Brunswick city temperatures. The get_valid_cities() function scrapes the Wikipedia page listing New Brunswick cities to compile a list of valid city names. For each city, the get_city_data(city) function accesses its Wikipedia page, extracts geographic coordinates, and retrieves monthly climate data-including maximum, mean, and minimum temperatures-from the climate table. The create_feature_class() function sets up an ArcGIS feature class in the specified geodatabase, defining fields for each temperature statistic for every month, as well as the city name and spatial location. Finally, the main() function orchestrates the workflow by first creating the feature class, then scraping all city names, extracting their respective data, and inserting the compiled information into the feature class, resulting in a comprehensive spatial dataset of city temperature statistics.
